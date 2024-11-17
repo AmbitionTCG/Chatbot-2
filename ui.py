@@ -36,10 +36,8 @@ def length(user_input):
     return length
 
 def text_bubble(user_input):
-    frame_bubble = add_frame(width=length(user_input), height=30, fg_color="grey", bg_color="#2B2B2B")
-    label_bubble = add_label(master=frame_bubble, text=user_input, anchor=W, relx=0.1, text_color="#141414")
-    label_bubble.pack(padx=10)
-    return label_bubble
+    add_label(master=add_frame(width=length(user_input), height=30, fg_color="grey", bg_color="#2B2B2B"), text=user_input, anchor=W, relx=0.1, text_color="#141414")
+
 
 
 
