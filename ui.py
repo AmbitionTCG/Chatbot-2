@@ -5,6 +5,7 @@ import ResetTimer
 import time
 import random
 
+from languageModel import detection_func
 
 count = 0
 
@@ -61,7 +62,7 @@ def myUI():
             return
 
 
-        bot_reply = f"Bot says: {user_input[::-1]}"
+        bot_reply = f"Bot says: {detection_func(user_input)}"
         running = True
         while running:
             if (time.time() - timenow) > 0.5:

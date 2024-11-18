@@ -44,9 +44,8 @@ def generate_response(issue_category):
         return ("Ber om ursäkt, men kan inte hjälpa dig med det.")
 
 #hur functionerna skulle funka
-    """"issue_category = detect_issue(user_input)
-
+def detection_func(user_input):
+    issue_category = detect_issue(user_input)
     response = generate_response(issue_category)
-
-    print(response)"""
+    return response
 
