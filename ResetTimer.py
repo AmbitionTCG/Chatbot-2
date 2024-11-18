@@ -27,3 +27,4 @@ def timer():
             ui.resetfunc()
             print("reset func here")
             timer_running = False
+
