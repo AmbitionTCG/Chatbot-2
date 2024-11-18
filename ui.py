@@ -1,12 +1,11 @@
 from tkinter import *
 import customtkinter
-
+import languageModel
 import time
 
 count = 0
 
 message_row = 0
-
 
 
 root = customtkinter.CTk()

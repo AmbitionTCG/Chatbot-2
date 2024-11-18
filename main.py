@@ -1,12 +1,10 @@
-from operator import truediv
-
 import ui
 import time
 import threading
 
 # Global variable to store the start time and timer state
 timer_running = False
-start_time = None
+start_time = 0
 original_input_list_len = len(ui.input_list)
 
 # Function to start or reset the timer
@@ -33,3 +31,4 @@ def timer():
 if original_input_list_len != len(ui.input_list):
     start_or_reset_timer()
     original_input_list_len = len(ui.input_list)
+
