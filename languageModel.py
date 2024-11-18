@@ -32,7 +32,7 @@ def preprocess_input(user_input):
 def detect_issue(user_input):
     tokens = preprocess_input(user_input)
 
-    for category, keywords in anvandningar_lista.item():
+    for category, keywords in anvandningar_lista.items():
         if any(keyword in tokens for keyword in keywords):
             return category
     return "general"
