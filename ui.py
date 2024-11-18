@@ -17,6 +17,8 @@ custom_font = customtkinter.CTkFont(family="Helvetica", size=15, weight="bold")
 
 customtkinter.set_appearance_mode("dark")
 
+
+
 def exit_app():
     root.destroy()
 
@@ -33,6 +35,7 @@ def send(event) -> str:
     message_row += 1
     print(message_row)
     
+
     root.update()
 
     if user_input.lower() == "sluta":
@@ -65,9 +68,9 @@ def add_message_bubble(text, align="right", color="grey", max_width=400):
 
     bubble_frame = Frame(message_frame, bg=color)
     if align == "right":
-        bubble_frame.grid(row=message_row, column=1, sticky="e", padx=(100, 10), pady=5)
+        bubble_frame.grid(row=message_row, column=0, sticky="e", padx=(10, 10), pady=5)
     elif align == "left":
-        bubble_frame.grid(row=message_row, column=0, sticky="w", padx=(10, 100), pady=5)
+        bubble_frame.grid(row=message_row, column=0, sticky="w", padx=(10, 10), pady=5)
     
 
     bubble_label = Label(
@@ -89,7 +92,7 @@ def clear_text():
 chat_canvas = Canvas(root, bg="#2B2B2B", highlightthickness=0)
 chat_canvas.place(relx=0.5, rely=0.45, anchor=CENTER, width=700, height=350)
 
-scrollbar = Scrollbar(root, orient=VERTICAL, command=chat_canvas.yview)
+scrollbar = custom_fontScrollbar(root, orient=VERTICAL, command=chat_canvas.yview,)
 scrollbar.place(relx=0.87, rely=0.45, anchor="center", height=350)
 
 chat_canvas.configure(yscrollcommand=scrollbar.set)
@@ -104,6 +107,7 @@ def configure_scroll_region(event):
 
 message_frame.bind("<Configure>", configure_scroll_region)
 
+add_message_bubble((" " * 400), align="left", color="#2B2B2B", max_width=400 )
 
 button_send = customtkinter.CTkButton(master=root, text="Send", command=send)
 
