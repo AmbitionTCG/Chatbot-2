@@ -25,11 +25,7 @@ input_list = []
 def exit_app():
     root.destroy()
 
-<<<<<<< Updated upstream
-def send(event, user_input="", input_list=[]) -> str:
-=======
-def send(*args) -> str:
->>>>>>> Stashed changes
+def send(user_input="", input_list=[], *args) -> str:
 
     global message_row
 
@@ -103,13 +99,8 @@ def clear_text():
 chat_canvas = Canvas(root, bg="#2B2B2B", highlightthickness=0)
 chat_canvas.place(relx=0.5, rely=0.45, anchor=CENTER, width=700, height=350)
 
-<<<<<<< Updated upstream
-scrollbar = Scrollbar(root, orient=VERTICAL, command=chat_canvas.yview,)
-scrollbar.place(relx=0.87, rely=0.45, anchor="center", height=350)
-=======
 scrollbar = customtkinter.CTkScrollbar(root, command=chat_canvas.yview, fg_color="transparent", height=350)
 scrollbar.place(relx=0.1, rely=0.45, anchor="center")
->>>>>>> Stashed changes
 
 chat_canvas.configure(yscrollcommand=scrollbar.set)
 
