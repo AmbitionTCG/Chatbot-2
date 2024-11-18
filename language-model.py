@@ -28,7 +28,7 @@ def preprocess_input(user_input):
     return filtered_tokens
 
 
-def detection_function(user_input):
+def detect_issue(user_input):
     tokens = preprocess_input(user_input)
 
     for category, keywords in anvandningar_lista.item():
