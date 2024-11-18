@@ -7,6 +7,8 @@ count = 0
 
 message_row = 0
 
+
+
 root = customtkinter.CTk()
 
 root.geometry("800x500")
@@ -18,15 +20,17 @@ custom_font = customtkinter.CTkFont(family="Helvetica", size=15, weight="bold")
 customtkinter.set_appearance_mode("dark")
 
 
-
+user_input = ""
+input_list = []
 def exit_app():
     root.destroy()
 
-def send(event) -> str:
+def send(event, user_input, input_list) -> str:
 
     global message_row
 
     user_input = entry.get()
+    
     clear_text()
 
     timenow = time.time()
@@ -55,6 +59,9 @@ def send(event) -> str:
 
     chat_canvas.update_idletasks()
     chat_canvas.yview_moveto(1.0)
+
+    input_list.append(user_input)
+    return user_input
 
 
 
