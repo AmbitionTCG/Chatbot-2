@@ -20,7 +20,7 @@ class VariableWatcher:
     def on_change(self, new_value):
         start_time = time.time()
 
-while timing:
+while True:
     if elapsed_time < 30:
         print("reset func here")
         break
