@@ -25,7 +25,7 @@ input_list = []
 def exit_app():
     root.destroy()
 
-def send(event, user_input, input_list) -> str:
+def send(event, user_input="", input_list=[]) -> str:
 
     global message_row
 

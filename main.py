@@ -21,7 +21,6 @@ def start_or_reset_timer():
         print("Timer reset!")
         start_time = time.time()  # Reset the start time
         timer_running = True  # Keep the timer running
-        # Reset the timer thread if needed
 
 def timer():
     global timer_running, start_time
