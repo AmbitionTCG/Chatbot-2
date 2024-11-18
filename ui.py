@@ -30,8 +30,10 @@ def send(event) -> str:
     timenow = time.time()
 
     add_message_bubble(user_input, align="right", color="grey", max_width=400)
-    message_row += 1  
+    message_row += 1
+    print(message_row)
     
+    root.update()
 
     if user_input.lower() == "sluta":
         exit_app()
@@ -41,10 +43,11 @@ def send(event) -> str:
     bot_reply = f"Bot says: {user_input[::-1]}"
     running = True
     while running:
-        if (time.time() - timenow) > 6:
+        if (time.time() - timenow) > 0.5:
             add_message_bubble(bot_reply, align="left", color="#444444", max_width=400)
             running = False
-    message_row += 1 
+            message_row += 1 
+            print(message_row)
 
 
     chat_canvas.update_idletasks()
