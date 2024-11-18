@@ -126,5 +126,4 @@ entry.place(relx=0.39, rely=0.9, anchor=CENTER)
 
 root.bind("<Return>", send)
 
-if __name__ == "__main__":
     root.mainloop()
