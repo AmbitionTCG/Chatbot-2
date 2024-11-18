@@ -13,11 +13,11 @@ anvandningar_lista = {
 
 svars_lista = {
     "FAQ": [
-        "Vi förstår att du kan ha specifika frågor som behöver hjälp. Besök vår hemsida för att få tillgång till våra supporttjänster eller kontakta oss direkt för personlig assistans. Klicka här för mer information:"
+        "Vi förstår att du kan ha specifika frågor som behöver hjälp. Besök vår hemsida för att få tillgång till våra supporttjänster eller kontakta oss direkt för personlig assistans. Klicka här för mer information:",
         "svarsmöjlighet 1.2"
     ],
     "sak2": [
-        "Svarsmöjlighet 2.1"
+        "Svarsmöjlighet 2.1",
         "Svarsmöjlighet 2.2"
     ]
 }

@@ -65,6 +65,9 @@ def myUI():
             return
 
 
+        chat_canvas.update_idletasks()
+        chat_canvas.yview_moveto(1.0)
+
         bot_reply = f"Bot says: {languageModel.detection_func(user_input)}"
         running = True
         while running:
@@ -92,7 +95,7 @@ def myUI():
         return length
 
 
-    def add_message_bubble(text, align="right", color="grey", max_width=1280, isrelpy=False):
+    def add_message_bubble(text, align="right", color="grey", max_width=1080, isrelpy=False):
         global message_row
 
         bubble_frame = Frame(message_frame, bg=color)
