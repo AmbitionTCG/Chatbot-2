@@ -1,13 +1,13 @@
 from tkinter import *
 import customtkinter
 import languageModel
+import ResetTimer
 import time
 import random
 
 count = 0
 
 message_row = 0
-
 
 root = customtkinter.CTk()
 
@@ -19,12 +19,15 @@ custom_font = customtkinter.CTkFont(family="Helvetica", size=15, weight="bold")
 
 customtkinter.set_appearance_mode("dark")
 
-
 user_input = ""
+
 input_list = []
+
+
 def myUI():
     def exit_app():
         root.destroy()
+
 
     def send(user_input="", input_list=[], *args) -> str:
 
@@ -62,6 +65,7 @@ def myUI():
         chat_canvas.yview_moveto(1.0)
 
         input_list.append(user_input)
+        ResetTimer.start_or_reset_timer()
         return user_input
 
 
@@ -140,7 +144,9 @@ def myUI():
 
     root.bind("<Return>", send)
 
+
     root.mainloop()
+
 
 if __name__ == "__main__":
     myUI()

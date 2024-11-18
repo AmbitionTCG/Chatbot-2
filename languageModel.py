@@ -39,7 +39,7 @@ def detect_issue(user_input):
 
 def generate_response(issue_category):
     if issue_category in svars_lista:
-        return random.choice(responses[issue_category])
+        return random.choice(svars_lista[issue_category])
     else:
         return ("Ber om ursäkt, men kan inte hjälpa dig med det.")
 
