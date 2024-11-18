@@ -14,11 +14,16 @@ user_input = ""
 
 input_list = []
 
-def reset():
+reset = False
+
+def resetfunc():
     reset = True
+    print(reset)
 
 
 def myUI():
+
+    global reset
 
     root = customtkinter.CTk()
 
@@ -117,7 +122,11 @@ def myUI():
     def clear_text():
         entry.delete(0, "end")
 
-
+    if reset == True:
+            print("belo")
+            root.quit()
+            myUI()
+            reset = False
 
     chat_canvas = Canvas(root, bg="#2B2B2B", highlightthickness=0)
     chat_canvas.place(relx=0.5, rely=0.45, anchor=CENTER, width=1500, height=600)
@@ -152,10 +161,6 @@ def myUI():
 
     root.mainloop()
 
-    if reset == True:
-            root.quit()
-            myUI()
-            reset = False
 
 
 if __name__ == "__main__":

@@ -24,6 +24,6 @@ def timer():
     while timer_running:
         elapsed_time = time.time() - start_time
         if elapsed_time >= 3:
-            ui.reset()
+            ui.resetfunc()
             print("reset func here")
             timer_running = False
