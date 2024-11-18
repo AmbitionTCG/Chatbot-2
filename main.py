@@ -7,6 +7,7 @@ import threading
 # Global variable to store the start time and timer state
 timer_running = False
 start_time = None
+original_input_list_len = len(ui.input_list)
 
 # Function to start or reset the timer
 def start_or_reset_timer():
@@ -30,3 +31,6 @@ def timer():
             print("reset func here")
             timer_running = False
 
+if original_input_list_len != len(ui.input_list):
+    start_or_reset_timer()
+    original_input_list_len = len(ui.input_list)

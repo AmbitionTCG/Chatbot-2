@@ -99,7 +99,7 @@ def clear_text():
 chat_canvas = Canvas(root, bg="#2B2B2B", highlightthickness=0)
 chat_canvas.place(relx=0.5, rely=0.45, anchor=CENTER, width=700, height=350)
 
-scrollbar = custom_fontScrollbar(root, orient=VERTICAL, command=chat_canvas.yview,)
+scrollbar = Scrollbar(root, orient=VERTICAL, command=chat_canvas.yview,)
 scrollbar.place(relx=0.87, rely=0.45, anchor="center", height=350)
 
 chat_canvas.configure(yscrollcommand=scrollbar.set)
