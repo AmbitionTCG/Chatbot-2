@@ -11,7 +11,7 @@ message_row = 0
 
 root = customtkinter.CTk()
 
-root.geometry("800x500")
+root.geometry("1920x1080")
 
 customtkinter.set_default_color_theme("green")
 
@@ -126,5 +126,5 @@ entry.place(relx=0.39, rely=0.9, anchor=CENTER)
 
 root.bind("<Return>", send)
 
-
-root.mainloop()
+if __name__ == "__main__":
+    root.mainloop()
