@@ -40,6 +40,7 @@ def send(*args) -> str:
         return
 
 
+
     bot_reply = f"Bot says: {user_input[::-1]}"
     add_message_bubble(bot_reply, align="left", color="#444444", max_width=400)
     message_row += 1 
@@ -64,9 +65,9 @@ def add_message_bubble(text, align="right", color="grey", max_width=400):
 
     bubble_frame = Frame(message_frame, bg=color)
     if align == "right":
-        bubble_frame.grid(row=message_row, column=1, sticky="e", padx=(100, 10), pady=5)
+        bubble_frame.grid(row=message_row, column=1, sticky="e", padx=(10, 10), pady=5)
     elif align == "left":
-        bubble_frame.grid(row=message_row, column=0, sticky="w", padx=(10, 100), pady=5)
+        bubble_frame.grid(row=message_row, column=0, sticky="w", padx=(10, 10), pady=5)
     
 
     bubble_label = Label(
@@ -102,6 +103,7 @@ def change_placement(button_relx: float=0.85,
                      *args):
     button_send.place(relx=button_relx, rely=button_rely)
     entry.place(relx=entry_relx, rely=entry_rely)
+
 
 
 chat_canvas = Canvas(root, bg="#2B2B2B", highlightthickness=0)
