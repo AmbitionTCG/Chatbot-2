@@ -50,6 +50,9 @@ def myUI():
 
         timenow = time.time()
 
+        entry.configure(state="disabled")
+        button_send.configure(state="disabled")
+
         add_message_bubble(user_input, align="right", color="grey", max_width=1280)
         message_row += 1
         print(message_row)
@@ -74,6 +77,9 @@ def myUI():
 
         chat_canvas.update_idletasks()
         chat_canvas.yview_moveto(1.0)
+
+        entry.configure(state="normal")
+        button_send.configure(state="normal")     
 
         input_list.append(user_input)
         ResetTimer.start_or_reset_timer()
@@ -110,11 +116,28 @@ def myUI():
         
         def typewriter_animation():
             current_text = ""
+            total_time = 4000
+            total_characters = len(text)
+
+            if total_characters < 100:
+                total_time = 2000
+
+            avg_delay = total_time / total_characters
+
+            if total_characters == 0:
+                return
+            
+
+
             for char in text:
                 current_text += char
                 bubble_label.configure(text=current_text)
                 bubble_label.update()
-                time.sleep(random.randint(20, 70) / 1000)
+                delay = avg_delay * random.uniform(0.75, 1.25)
+                
+                time.sleep(delay / 1000)
+            
+            total_time = 4000
     
         if isrelpy == True:
             typewriter_animation()
@@ -122,6 +145,7 @@ def myUI():
 
     def clear_text():
         entry.delete(0, "end")
+ 
 
     if reset == True:
             print("belo")
