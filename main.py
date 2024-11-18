@@ -32,3 +32,4 @@ if original_input_list_len != len(ui.input_list):
     start_or_reset_timer()
     original_input_list_len = len(ui.input_list)
 
+ui.myUI()
