@@ -2,6 +2,7 @@ from tkinter import *
 import customtkinter
 import languageModel
 import time
+import random
 
 count = 0
 
@@ -51,7 +52,7 @@ def myUI():
         running = True
         while running:
             if (time.time() - timenow) > 0.5:
-                add_message_bubble(bot_reply, align="left", color="#444444", max_width=1280)
+                add_message_bubble(bot_reply, align="left", color="#444444", max_width=1280, isrelpy=True)
                 running = False
                 message_row += 1
                 print(message_row)
@@ -70,7 +71,7 @@ def myUI():
         return length
 
 
-    def add_message_bubble(text, align="right", color="grey", max_width=1280):
+    def add_message_bubble(text, align="right", color="grey", max_width=1280, isrelpy=False):
         global message_row
 
         bubble_frame = Frame(message_frame, bg=color)
@@ -90,6 +91,18 @@ def myUI():
             font=custom_font
         )
         bubble_label.pack(padx=(10, 10), pady=5)
+        
+        
+        def typewriter_animation():
+            current_text = ""
+            for char in text:
+                current_text += char
+                bubble_label.configure(text=current_text)
+                bubble_label.update()
+                time.sleep(random.randint(20, 70) / 1000)
+    
+        if isrelpy == True:
+            typewriter_animation()
 
 
     def clear_text():
@@ -128,3 +141,6 @@ def myUI():
     root.bind("<Return>", send)
 
     root.mainloop()
+
+if __name__ == "__main__":
+    myUI()
