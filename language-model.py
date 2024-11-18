@@ -6,13 +6,14 @@ from nltk.corpus import stopwords
 import random
 
 anvandningar_lista = {
-    "Stuff1": ["1Stuff"],
-    "Stuff2": ["2Stuff"]
+    "registrera för prova på dag": ["prova",],
+    "FAQ": ["antagning","program","prov","kurs", "lektion",]
+
 }
 
 svars_lista = {
-    "sak1": [
-        "Svarsmöjlighet 1.1"
+    "FAQ": [
+        "Vi förstår att du kan ha specifika frågor som behöver hjälp. Besök vår hemsida för att få tillgång till våra supporttjänster eller kontakta oss direkt för personlig assistans. Klicka här för mer information:"
         "svarsmöjlighet 1.2"
     ],
     "sak2": [
