@@ -1,5 +1,6 @@
 import time
 import threading
+import ui
 
 
 timer_running = False
@@ -22,6 +23,7 @@ def timer():
     global timer_running, start_time
     while timer_running:
         elapsed_time = time.time() - start_time
-        if elapsed_time >= 30:
+        if elapsed_time >= 3:
+            ui.reset()
             print("reset func here")
             timer_running = False

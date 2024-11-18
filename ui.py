@@ -5,26 +5,31 @@ import ResetTimer
 import time
 import random
 
+
 count = 0
 
 message_row = 0
-
-root = customtkinter.CTk()
-
-root.geometry("1920x1080")
-
-customtkinter.set_default_color_theme("green")
-
-custom_font = customtkinter.CTkFont(family="Helvetica", size=15, weight="bold")
-
-customtkinter.set_appearance_mode("dark")
 
 user_input = ""
 
 input_list = []
 
+def reset():
+    reset = True
+
 
 def myUI():
+
+    root = customtkinter.CTk()
+
+    root.geometry("1920x1080")
+
+    customtkinter.set_default_color_theme("green")
+
+    custom_font = customtkinter.CTkFont(family="Helvetica", size=15, weight="bold")
+
+    customtkinter.set_appearance_mode("dark")
+
     def exit_app():
         root.destroy()
 
@@ -146,6 +151,11 @@ def myUI():
 
 
     root.mainloop()
+
+    if reset == True:
+            root.quit()
+            myUI()
+            reset = False
 
 
 if __name__ == "__main__":
