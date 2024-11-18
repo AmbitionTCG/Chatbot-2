@@ -105,24 +105,24 @@ def change_placement(button_relx: float=0.85,
     entry.place(relx=entry_relx, rely=entry_rely)
 
 
+def main_chat():
+    chat_canvas = Canvas(root, bg="#2B2B2B", highlightthickness=0)
+    chat_canvas.place(relx=0.5, rely=0.45, anchor=CENTER, width=700, height=350)
 
-chat_canvas = Canvas(root, bg="#2B2B2B", highlightthickness=0)
-chat_canvas.place(relx=0.5, rely=0.45, anchor=CENTER, width=700, height=350)
+    scrollbar = Scrollbar(root, orient=VERTICAL, command=chat_canvas.yview)
+    scrollbar.place(relx=0.87, rely=0.45, anchor="center", height=350)
 
-scrollbar = Scrollbar(root, orient=VERTICAL, command=chat_canvas.yview)
-scrollbar.place(relx=0.87, rely=0.45, anchor="center", height=350)
-
-chat_canvas.configure(yscrollcommand=scrollbar.set)
+    chat_canvas.configure(yscrollcommand=scrollbar.set)
 
 
-message_frame = Frame(chat_canvas, bg="#2B2B2B")
-chat_canvas.create_window((0, 0), window=message_frame, anchor="nw", width=680)
+    message_frame = Frame(chat_canvas, bg="#2B2B2B")
+    chat_canvas.create_window((0, 0), window=message_frame, anchor="nw", width=680)
 
-def configure_scroll_region(event):
-    
-    chat_canvas.configure(scrollregion=chat_canvas.bbox("all"))
+    def configure_scroll_region(event):
+        
+        chat_canvas.configure(scrollregion=chat_canvas.bbox("all"))
 
-message_frame.bind("<Configure>", configure_scroll_region)
+    message_frame.bind("<Configure>", configure_scroll_region)
 
 
 button_send = customtkinter.CTkButton(master=root, text="Send", command=send)
