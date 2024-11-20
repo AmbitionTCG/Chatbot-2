@@ -187,8 +187,4 @@ def myUI():
 
 
 if __name__ == "__main__":
-    p = 0
-    for i in range(1000):
-        p += i
-        print(p)
-    reset()
+    myUI()
