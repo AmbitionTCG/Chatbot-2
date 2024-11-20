@@ -48,7 +48,6 @@ def generate_response(issue_category):
     else:
         return ("Ber om ursäkt, men jag kan inte hjälpa dig med det.")
 
-#hur functionerna skulle funka
 def detection_func(user_input):
     if RegVar == False:
         issue_category = detect_issue(user_input)
