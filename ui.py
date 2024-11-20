@@ -5,7 +5,7 @@ import ResetTimer
 import time
 import random
 
-from languageModel import detection_func
+
 
 count = 0
 
@@ -15,11 +15,9 @@ user_input = ""
 
 input_list = []
 
-reset = False
 
 def resetfunc():
-    reset = True
-    print(reset)
+    reset()
 
 
 def myUI():
@@ -93,11 +91,6 @@ def myUI():
 
 
 
-    def length(user_input):
-        length = custom_font.measure(text=user_input) + 20
-        return length
-
-
     def add_message_bubble(text, align="right", color="grey", max_width=1080, isrelpy=False):
         global message_row
 
@@ -154,12 +147,11 @@ def myUI():
     def clear_text():
         entry.delete(0, "end")
  
-
-    if reset == True:
+    def reset():
             print("belo")
             root.quit()
             myUI()
-            reset = False
+
 
     chat_canvas = Canvas(root, bg="#2B2B2B", highlightthickness=0)
     chat_canvas.place(relx=0.5, rely=0.45, anchor=CENTER, width=1500, height=600)
@@ -191,13 +183,12 @@ def myUI():
 
     entry.bind("<Return>", send)
 
-
-
-
     root.mainloop()
 
 
-
 if __name__ == "__main__":
-    myUI()
-
+    p = 0
+    for i in range(1000):
+        p += i
+        print(p)
+    reset()
