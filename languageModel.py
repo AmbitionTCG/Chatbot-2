@@ -11,14 +11,17 @@ anvandningar_lista = {
 
 }
 
+#måste finnas minst 3 svarsmöjligheter per lista annars kommer random choice bara välja den andra svarsmöjligheten
 svars_lista = {
     "FAQ": [
         "Vi förstår att du kan ha specifika frågor som behöver hjälp. Besök vår hemsida för att få tillgång till våra supporttjänster eller kontakta oss direkt för personlig assistans. Klicka här för mer information:",
-        "svarsmöjlighet 1.2"
+        "svarsmöjlighet 1.2",
+        "svarsmöjlighet 1.3"
     ],
     "registrera för prova på dag": [
         "Svarsmöjlighet 2.1",
-        "Svarsmöjlighet 2.2"
+        "Svarsmöjlighet 2.2",
+        "svarsmöjlighet 2.3"
     ]
 }
 #preprocess user input
@@ -41,7 +44,7 @@ def generate_response(issue_category):
     if issue_category in svars_lista:
         return random.choice(svars_lista[issue_category])
     else:
-        return ("Ber om ursäkt, men kan inte hjälpa dig med det.")
+        return ("Ber om ursäkt, men jag kan inte hjälpa dig med det.")
 
 #hur functionerna skulle funka
 def detection_func(user_input):
