@@ -16,14 +16,14 @@ anvandningar_lista = {
 #måste finnas minst 3 svarsmöjligheter per lista annars kommer random choice bara välja den andra svarsmöjligheten
 svars_lista = {
     "FAQ": [
-        "Vi förstår att du kan ha specifika frågor som behöver hjälp. Besök vår hemsida för att få tillgång till våra supporttjänster eller kontakta oss direkt för personlig assistans. Klicka här för mer information:",
-        "svarsmöjlighet 1.2",
-        "svarsmöjlighet 1.3"
+        "Vi förstår att du kan ha specifika frågor som behöver hjälp. Besök vår hemsida för att få tillgång till våra supporttjänster eller kontakta oss direkt för personlig assistans på tumbagymnasium.se",
+        "Om du har specifika frågor, besök vår hemsida för information om våra program och andra resurser, eller använd kontaktsidan på tumbagymnasium.se för att nå vår personal direkt.",
+        "Behöver du hjälp med frågor? På vår hemsida hittar du information om vilka program vi erbjuder, och du kan också kontakta vår personal direkt via kontaktsidan på tumbagymnasium.se."
     ],
     "registrera för prova på dag": [
-        "Svarsmöjlighet 2.1",
-        "Svarsmöjlighet 2.2",
-        "svarsmöjlighet 2.3"
+        "Är du intresserad av att testa på en dag hos Tumba Gymnasium vid nästa 'prova på'-tillfälle?",
+        "Nyfiken på hur det är att gå på Tumba Gymnasium? Delta i vårt kommande 'prova på'-tillfälle!",
+        "Du kan prova på hos Tumba Gymnasium vid vårt nästa 'prova på'-tillfälle."
     ]
 }
 #preprocess user input
