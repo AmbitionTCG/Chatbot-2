@@ -5,7 +5,7 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import random
 import Registration
-from Registration import RegVar
+
 
 anvandningar_lista = {
     "registrera för prova på dag": ["prova",],
@@ -49,7 +49,7 @@ def generate_response(issue_category):
         return ("Ber om ursäkt, men jag kan inte hjälpa dig med det.")
 
 def detection_func(user_input):
-    if RegVar == False:
+    if Registration.RegVar == False:
         issue_category = detect_issue(user_input)
         if issue_category == "registrera för prova på dag":
             Registration.RegFunc()
