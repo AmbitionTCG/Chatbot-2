@@ -5,7 +5,7 @@ import ResetTimer
 import time
 import random
 
-from languageModel import detection_func
+
 
 count = 0
 
@@ -15,11 +15,6 @@ user_input = ""
 
 input_list = []
 
-reset = False
-
-def resetfunc():
-    reset = True
-    print(reset)
 
 
 def myUI():
@@ -50,6 +45,8 @@ def myUI():
 
         timenow = time.time()
 
+        entry.unbind("<Return>")
+
         entry.configure(state="disabled")
         button_send.configure(state="disabled")
 
@@ -65,9 +62,6 @@ def myUI():
             return
 
 
-        chat_canvas.update_idletasks()
-        chat_canvas.yview_moveto(1.0)
-
         bot_reply = f"Bot says: {languageModel.detection_func(user_input)}"
         running = True
         while running:
@@ -78,8 +72,9 @@ def myUI():
                 print(message_row)
 
 
-        chat_canvas.update_idletasks()
-        chat_canvas.yview_moveto(1.0)
+
+
+        entry.bind("<Return>", send)
 
         entry.configure(state="normal")
         button_send.configure(state="normal")     
@@ -88,11 +83,6 @@ def myUI():
         ResetTimer.start_or_reset_timer()
         return user_input
 
-
-
-    def length(user_input):
-        length = custom_font.measure(text=user_input) + 20
-        return length
 
 
     def add_message_bubble(text, align="right", color="grey", max_width=1080, isrelpy=False):
@@ -115,6 +105,9 @@ def myUI():
             font=custom_font
         )
         bubble_label.pack(padx=(10, 10), pady=5)
+
+        chat_canvas.update_idletasks()
+        chat_canvas.yview_moveto(1.0)
         
         
         def typewriter_animation():
@@ -144,17 +137,20 @@ def myUI():
     
         if isrelpy == True:
             typewriter_animation()
+            chat_canvas.update_idletasks()
+            chat_canvas.yview_moveto(1.0)
 
 
     def clear_text():
         entry.delete(0, "end")
  
 
-    if reset == True:
-            print("belo")
+    def reset():
             root.quit()
             myUI()
-            reset = False
+
+
+
 
     chat_canvas = Canvas(root, bg="#2B2B2B", highlightthickness=0)
     chat_canvas.place(relx=0.5, rely=0.45, anchor=CENTER, width=1500, height=600)
@@ -189,6 +185,9 @@ def myUI():
 
     root.mainloop()
 
+
+def resetfunc():
+    reset()
 
 
 if __name__ == "__main__":
