@@ -5,7 +5,7 @@ import ResetTimer
 import time
 import random
 
-
+from languageModel import detection_func
 
 count = 0
 
@@ -15,9 +15,11 @@ user_input = ""
 
 input_list = []
 
+reset = False
 
 def resetfunc():
-    reset()
+    reset = True
+    print(reset)
 
 
 def myUI():
@@ -48,17 +50,10 @@ def myUI():
 
         timenow = time.time()
 
-        entry.unbind("<Return>")
-
         entry.configure(state="disabled")
         button_send.configure(state="disabled")
 
         add_message_bubble(user_input, align="right", color="grey", max_width=1280)
-
-        chat_canvas.update_idletasks()
-        chat_canvas.yview_moveto(1.0)
-
-
         message_row += 1
         print(message_row)
     
@@ -70,6 +65,9 @@ def myUI():
             return
 
 
+        chat_canvas.update_idletasks()
+        chat_canvas.yview_moveto(1.0)
+
         bot_reply = f"Bot says: {languageModel.detection_func(user_input)}"
         running = True
         while running:
@@ -78,17 +76,23 @@ def myUI():
                 running = False
                 message_row += 1
                 print(message_row)
-                
+
+
+        chat_canvas.update_idletasks()
+        chat_canvas.yview_moveto(1.0)
 
         entry.configure(state="normal")
-        button_send.configure(state="normal")    
-
-        entry.bind("<Return>", send) 
+        button_send.configure(state="normal")     
 
         input_list.append(user_input)
         ResetTimer.start_or_reset_timer()
         return user_input
 
+
+
+    def length(user_input):
+        length = custom_font.measure(text=user_input) + 20
+        return length
 
 
     def add_message_bubble(text, align="right", color="grey", max_width=1080, isrelpy=False):
@@ -112,9 +116,7 @@ def myUI():
         )
         bubble_label.pack(padx=(10, 10), pady=5)
         
-        chat_canvas.update_idletasks()
-        chat_canvas.yview_moveto(1.0)
-
+        
         def typewriter_animation():
             current_text = ""
             total_time = 4000
@@ -137,7 +139,7 @@ def myUI():
                 delay = avg_delay * random.uniform(0.75, 1.25)
                 
                 time.sleep(delay / 1000)
-
+            
             total_time = 4000
     
         if isrelpy == True:
@@ -147,11 +149,12 @@ def myUI():
     def clear_text():
         entry.delete(0, "end")
  
-    def reset():
+
+    if reset == True:
             print("belo")
             root.quit()
             myUI()
-
+            reset = False
 
     chat_canvas = Canvas(root, bg="#2B2B2B", highlightthickness=0)
     chat_canvas.place(relx=0.5, rely=0.45, anchor=CENTER, width=1500, height=600)
@@ -181,10 +184,13 @@ def myUI():
 
     entry.place(relx=0.39, rely=0.9, anchor=CENTER)
 
-    entry.bind("<Return>", send)
+    root.bind("<Return>", send)
+
 
     root.mainloop()
 
 
+
 if __name__ == "__main__":
     myUI()
+

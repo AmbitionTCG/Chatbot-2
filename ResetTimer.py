@@ -4,7 +4,6 @@ import ui
 timer_running = False
 start_time = 0
 
-
 def start_or_reset_timer():
     global timer_running, start_time
     if not timer_running:
