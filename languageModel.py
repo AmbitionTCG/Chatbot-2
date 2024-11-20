@@ -22,8 +22,8 @@ svars_lista = {
     ],
     "registrera för prova på dag": [
         "Är du intresserad av att testa på en dag hos Tumba Gymnasium vid nästa 'prova på'-tillfälle?",
-        "Nyfiken på hur det är att gå på Tumba Gymnasium? Delta i vårt kommande 'prova på'-tillfälle!",
-        "Du kan prova på hos Tumba Gymnasium vid vårt nästa 'prova på'-tillfälle."
+        "Nyfiken på hur det är att gå på Tumba Gymnasium? skulle du villja delta i vårt kommande 'prova på'-tillfälle?",
+        "Om du önskar kan prova på hos Tumba Gymnasium vid vårt nästa 'prova på'-tillfälle."
     ]
 }
 #preprocess user input
