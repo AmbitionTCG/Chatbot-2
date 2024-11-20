@@ -9,7 +9,12 @@ import Registration
 
 anvandningar_lista = {
     "registrera för prova på dag": ["prova",],
-    "FAQ": ["antagning","program","prov","kurs", "lektion",]
+    "FAQ": ["antagning","program","prov","kurs", "lektion",],
+    #svar frågor utifrån https://www.tumbagymnasium.se/elevinformation/sl-kort/
+    "SL-kort": ["SL","bus","tåg","pendel"],
+    #svara frågor utifrån individuella svar på https://www.tumbagymnasium.se/fragor-och-svar/
+    "IND-val": ["ind","individuella val"]
+    ""
 
 }
 
@@ -24,7 +29,31 @@ svars_lista = {
         "Är du intresserad av att testa på en dag hos Tumba Gymnasium vid nästa 'prova på'-tillfälle?",
         "Nyfiken på hur det är att gå på Tumba Gymnasium? skulle du villja delta i vårt kommande 'prova på'-tillfälle?",
         "Om du önskar kan prova på hos Tumba Gymnasium vid vårt nästa 'prova på'-tillfälle."
+    ],
+    "Skolterminen": [
+        "Undrar du när terminer börjar eller slutar?",
+    ],
+    "Sl-kort": [
+        """Undrar du om hur skolan erbjuder Sl-kort? detta är ett exerpt från tumbagymnasium.se:
+        Skolbiljett
+
+SL-kort (skolkort) är du berättigad till om din folkbokföringsadress är mer än 6 km från din skola och du är under 20 år. Vi mäter avståndet via google maps (gångväg)
+
+VANLIGA FRÅGOR
+
+Hur får jag mitt kort?
+
+Du köper ett kort på pressbyrån (20 kr). Värdekoden som skall tankas på kortet mejlas till elevens skolmejl.
+
+När gäller kortet?
+
+Kortet gäller varje vardag (måndag till fredag) mellan 04:30 och 19:00
+
+Vad händer om jag tappar bort mitt kort?
+
+För att ha gällande förlustgaranti så är det viktigt att registrera det Gröna kortet på SL:S hemsida. För att registrera kortet för förlustgaranti behöver du ha fyllt 16 år och ha BankID, är du under 16 år kan vårdnadshavare registrera kortet. Om du saknar BankID kan du få hjälp att registrera kortet hos våra kundtjänstbutiker på Sergels torg och Stockholms central."""
     ]
+
 }
 #preprocess user input
 def preprocess_input(user_input):
@@ -46,7 +75,7 @@ def generate_response(issue_category):
     if issue_category in svars_lista:
         return random.choice(svars_lista[issue_category])
     else:
-        return ("Ber om ursäkt, men jag kan inte hjälpa dig med det.")
+        return ("Ber om ursäkt, men jag kan inte hjälpa dig med det. Vi kan hjälpa dig med att regestrera för prova på dagar eller kanske har du andra frågor om skolan?")
 
 def detection_func(user_input):
     if Registration.RegVar == False:
