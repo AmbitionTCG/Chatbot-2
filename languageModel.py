@@ -16,7 +16,7 @@ svars_lista = {
         "Vi förstår att du kan ha specifika frågor som behöver hjälp. Besök vår hemsida för att få tillgång till våra supporttjänster eller kontakta oss direkt för personlig assistans. Klicka här för mer information:",
         "svarsmöjlighet 1.2"
     ],
-    "sak2": [
+    "registrera för prova på dag": [
         "Svarsmöjlighet 2.1",
         "Svarsmöjlighet 2.2"
     ]
@@ -24,7 +24,7 @@ svars_lista = {
 #preprocess user input
 def preprocess_input(user_input):
     tokens = word_tokenize(user_input)
-    stop_words = set(stopwords.words('english'))
+    stop_words = set(stopwords.words('swedish'))
     filtered_tokens =[word for word in tokens if word not in stop_words]
     return filtered_tokens
 
