@@ -1,1 +1,1 @@
-Set sacling in windows to 100%
+Set scaling in windows to 100%
