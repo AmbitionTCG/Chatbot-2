@@ -11,10 +11,9 @@ anvandningar_lista = {
     "registrera för prova på dag": ["prova",],
     "FAQ": ["antagning","program","prov","kurs", "lektion",],
     #svar frågor utifrån https://www.tumbagymnasium.se/elevinformation/sl-kort/
-    "SL-kort": ["SL","bus","tåg","pendel"],
+    "SL-kort": ["SL", "bus", "tåg", "pendel"],
     #svara frågor utifrån individuella svar på https://www.tumbagymnasium.se/fragor-och-svar/
-    "IND-val": ["ind","individuella val"]
-    ""
+    "IND-val": ["ind", "individuella val"]
 
 }
 
