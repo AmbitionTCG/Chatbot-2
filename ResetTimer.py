@@ -8,17 +8,16 @@ start_time = 0
 
 def start_or_reset_timer():
     global timer_running, start_time
-    if not timer_running:
-        print("Starting the timer...")
-        start_time = time.time()
-        timer_running = True
-        threading.Thread(target=update_timer).start()
+    print("Starting the timer...")
+    start_time = time.time()
+    timer_running = True
+    threading.Thread(target=update_timer).start()
 
 def update_timer():
     global timer_running, start_time
     while timer_running:
         elapsed_time = time.time() - start_time
-        if elapsed_time >= 3:
+        if elapsed_time >= 30:
             ui.resetfunc()
             print("reset func here")
             timer_running = False
