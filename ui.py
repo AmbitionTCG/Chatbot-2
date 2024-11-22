@@ -19,7 +19,7 @@ input_list = []
 
 def myUI():
 
-    global reset
+    global reset, user_input
 
     root = customtkinter.CTk()
 
