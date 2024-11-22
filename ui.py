@@ -145,9 +145,9 @@ def myUI():
         entry.delete(0, "end")
  
 
-    def reset():
+    """def reset():
             root.quit()
-            myUI()
+            myUI()"""
 
 
 

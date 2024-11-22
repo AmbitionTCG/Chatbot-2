@@ -74,7 +74,7 @@ def generate_response(issue_category):
     if issue_category in svars_lista:
         return random.choice(svars_lista[issue_category])
     else:
-        return ("Ber om ursäkt, men jag kan inte hjälpa dig med det. Vi kan hjälpa dig med att regestrera för prova på dagar eller kanske har du andra frågor om skolan?")
+        return ("Ber om ursäkt, men jag kan inte hjälpa dig med det. Vi kan hjälpa dig med att registrera för prova på dagar eller kanske har du andra frågor om skolan?")
 
 def detection_func(user_input):
     if Registration.RegVar == False:

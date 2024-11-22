@@ -1,3 +1,6 @@
 import ui
+import ResetTimer
+import time
 
-ui.myUI()
+while time.time() - ResetTimer.start_time < 5 or ResetTimer.timer_running == False:
+    ui.myUI()
