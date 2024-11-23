@@ -31,9 +31,9 @@ def myUI():
 
     customtkinter.set_appearance_mode("dark")
 
-    def exit_app():
+    def reset():
         root.destroy()
-
+        myUI()
 
     def send(user_input="", input_list=[], *args) -> str:
 
@@ -58,7 +58,7 @@ def myUI():
         root.update()
 
         if user_input.lower() == "sluta":
-            exit_app()
+            reset()
             return
 
 
@@ -143,11 +143,6 @@ def myUI():
 
     def clear_text():
         entry.delete(0, "end")
- 
-
-    """def reset():
-            root.quit()
-            myUI()"""
 
 
 
@@ -185,9 +180,6 @@ def myUI():
 
     root.mainloop()
 
-
-def resetfunc():
-    reset()
 
 
 if __name__ == "__main__":

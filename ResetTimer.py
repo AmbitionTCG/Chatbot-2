@@ -1,6 +1,6 @@
 import time
-import ui
 import threading
+import ui
 
 timer_running = False
 start_time = 0
@@ -17,11 +17,10 @@ def update_timer():
     global timer_running, start_time
     while timer_running:
         elapsed_time = time.time() - start_time
-        if elapsed_time >= 30:
-            ui.resetfunc()
+        if elapsed_time >= 5:
             print("reset func here")
+
             timer_running = False
         time.sleep(0.5)
-
         
     
