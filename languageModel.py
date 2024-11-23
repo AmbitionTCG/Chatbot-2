@@ -51,6 +51,9 @@ Kortet gäller varje vardag (måndag till fredag) mellan 04:30 och 19:00
 Vad händer om jag tappar bort mitt kort?
 
 För att ha gällande förlustgaranti så är det viktigt att registrera det Gröna kortet på SL:S hemsida. För att registrera kortet för förlustgaranti behöver du ha fyllt 16 år och ha BankID, är du under 16 år kan vårdnadshavare registrera kortet. Om du saknar BankID kan du få hjälp att registrera kortet hos våra kundtjänstbutiker på Sergels torg och Stockholms central."""
+    ],
+    "IND-val": [
+    "svarsmöjlighet 1", "svarsmöjlighet 2", "svarsmöjlighet 3"
     ]
 
 }

@@ -18,7 +18,7 @@ def update_timer():
     global timer_running, start_time
     while timer_running:
         elapsed_time = time.time() - start_time
-        if elapsed_time >= 5:
+        if elapsed_time >= 30:
             print("reset func here")
             turnofffunc()
             timer_running = False
