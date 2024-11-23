@@ -10,9 +10,7 @@ import Registration
 anvandningar_lista = {
     "registrera för prova på dag": ["prova",],
     "FAQ": ["antagning","program","prov","kurs", "lektion",],
-    #svar frågor utifrån https://www.tumbagymnasium.se/elevinformation/sl-kort/
     "SL-kort": ["SL", "bus", "tåg", "pendel"],
-    #svara frågor utifrån individuella svar på https://www.tumbagymnasium.se/fragor-och-svar/
     "IND-val": ["ind", "individuella val"]
 
 }
@@ -77,7 +75,7 @@ def generate_response(issue_category):
     if issue_category in svars_lista:
         return random.choice(svars_lista[issue_category])
     else:
-        return ("Ber om ursäkt, men jag kan inte hjälpa dig med det. Vi kan hjälpa dig med att registrera för prova på dagar eller kanske har du andra frågor om skolan?")
+        return ("Ber om ursäkt, men jag kan inte hjälpa dig med det. Jag kan hjälpa dig med att registrera för prova på dagar eller kanske har du andra frågor om skolan?")
 
 def detection_func(user_input):
     if Registration.RegVar == False:
