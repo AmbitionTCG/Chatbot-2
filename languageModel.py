@@ -77,11 +77,11 @@ def generate_response(issue_category):
     else:
         return ("Ber om ursäkt, men jag kan inte hjälpa dig med det. Jag kan hjälpa dig med att registrera för prova på dagar eller kanske har du andra frågor om skolan?")
 
-def detection_func(user_input):
+def detection_func(user_input, inputuser):
     if Registration.RegVar == False:
         issue_category = detect_issue(user_input)
         if issue_category == "registrera för prova på dag":
-            Registration.RegFunc(str(ui.user_input))
+            Registration.RegFunc(str(inputuser))
         response = generate_response(issue_category)
         return response
 
