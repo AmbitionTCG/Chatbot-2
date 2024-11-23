@@ -2,10 +2,12 @@ import ui
 
 RegVar = False
 
-def RegFunc():
+def RegFunc(write):
     print("regfunc here")
     RegVar = True
     with open('User_inputs.txt', 'w+') as f:
-            f.write('%s\n' %ui.user_input)
+            f.write("\n" + write)
             print("file succesfully written in!")
-    f.close()
+
+
+

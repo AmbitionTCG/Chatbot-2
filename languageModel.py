@@ -1,6 +1,6 @@
 from encodings.punycode import generate_generalized_integer
 
-import nltk
+import ui
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import random
@@ -81,7 +81,7 @@ def detection_func(user_input):
     if Registration.RegVar == False:
         issue_category = detect_issue(user_input)
         if issue_category == "registrera för prova på dag":
-            Registration.RegFunc()
+            Registration.RegFunc(ui.user_input)
         response = generate_response(issue_category)
         return response
 
