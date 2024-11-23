@@ -11,7 +11,9 @@ anvandningar_lista = {
     "registrera för prova på dag": ["prova",],
     "FAQ": ["antagning","program","prov","kurs", "lektion",],
     "SL-kort": ["SL", "bus", "tåg", "pendel"],
-    "IND-val": ["ind", "individuella val"]
+    "IND-val": ["ind", "individuella val"],
+    "Bibliotek":["bibliotek", "böker"]
+    
 
 }
 
@@ -23,13 +25,12 @@ svars_lista = {
         "Behöver du hjälp med frågor? På vår hemsida hittar du information om vilka program vi erbjuder, och du kan också kontakta vår personal direkt via kontaktsidan på tumbagymnasium.se."
     ],
     "registrera för prova på dag": [
-        "Är du intresserad av att testa på en dag hos Tumba Gymnasium vid nästa 'prova på'-tillfälle?",
-        "Nyfiken på hur det är att gå på Tumba Gymnasium? skulle du villja delta i vårt kommande 'prova på'-tillfälle?",
-        "Om du önskar kan prova på hos Tumba Gymnasium vid vårt nästa 'prova på'-tillfälle."
+        "du kan nu skriva in namn och mailadress så kan vi kontakta dig för att prova på en dag hos oss",
+        "kul att du vill anmäla dig till en prova på dag, skriv nu ditt namn och mejladress så vi kan kontakta dig",
+        "tack för ditt intresse för att prova på en dag hos tumba gymnasium, skriv nu ned ditt namn och mejladress så kontaktar vi dig"
     ],
-    "Sl-kort": [
-        """Undrar du om hur skolan erbjuder Sl-kort? detta är ett exerpt från tumbagymnasium.se:
-        Skolbiljett
+    "SL-kort": [
+        """Undrar du om hur skolan erbjuder Sl-kort? detta kan var några saker att veta:
 
 SL-kort (skolkort) är du berättigad till om din folkbokföringsadress är mer än 6 km från din skola och du är under 20 år. Vi mäter avståndet via google maps (gångväg)
 
@@ -47,8 +48,35 @@ Vad händer om jag tappar bort mitt kort?
 
 För att ha gällande förlustgaranti så är det viktigt att registrera det Gröna kortet på SL:S hemsida. För att registrera kortet för förlustgaranti behöver du ha fyllt 16 år och ha BankID, är du under 16 år kan vårdnadshavare registrera kortet. Om du saknar BankID kan du få hjälp att registrera kortet hos våra kundtjänstbutiker på Sergels torg och Stockholms central."""
     ],
-    "IND-val": [
-    "svarsmöjlighet 1", "svarsmöjlighet 2", "svarsmöjlighet 3"
+    "IND-val": [ 
+        """Undrar du hur många IND-val kurser vi har har på tumba? har finns litte information om vårt sortiment.
+Tumba Gymnasium är en stor skola med många olika program därför kan vi erbjuda ett stort utbud av IND- val.
+
+Här följer en del exempel:
+
+• Moderna språk steg 1,2,3,4 och 5
+• Estetiska kurser så som bild, foto, film, scenisk gestaltning, radio, fotografi, körsång och dans.
+• Webbutveckling, webdesign, E-sport och programmering
+• Entreprenörskap och retorik
+• Idrottskurser så som friskvård, tjejidrott, fotboll, TG Toughest m.m
+• Engelska 7dfg
+• Matematik 2,3,4 och 5
+• Beteendevetenskapliga kurser så som kriminologi, psykologi och sociologi """
+    ],
+    "Bibliotek": [ 
+        """Undrar du något om biblioteket i tumba?
+
+ Biblioteket - skolans hjärta
+TG har Södertörns största gymnasiebibliotek. Det är en oas där du både kan grupparbeta
+och studera enskilt. Vi har massor av bra böcker och bibliotekets personal hjälper dig
+hitta rätt både i biblioteket och bland webbens alla infomationsresurser.
+
+Öppettider:
+Må 08.00-16.00 (studiepass 16.00-17.00)
+Ti 10.00-16.00 (mattestöd 09.00-10.00, studiepass 16.00-17.00)
+On 08.00-15.00
+To 08.00-16.00 (studiepass 16.00-17.00)
+Fr 08.00-14.30"""
     ]
 
 }
