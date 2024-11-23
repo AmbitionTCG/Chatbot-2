@@ -5,7 +5,7 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import random
 import Registration
-
+from Registration import RegVar
 
 anvandningar_lista = {
     "registrera för prova på dag": ["prova",],
@@ -26,9 +26,6 @@ svars_lista = {
         "Är du intresserad av att testa på en dag hos Tumba Gymnasium vid nästa 'prova på'-tillfälle?",
         "Nyfiken på hur det är att gå på Tumba Gymnasium? skulle du villja delta i vårt kommande 'prova på'-tillfälle?",
         "Om du önskar kan prova på hos Tumba Gymnasium vid vårt nästa 'prova på'-tillfälle."
-    ],
-    "Skolterminen": [
-        "Undrar du när terminer börjar eller slutar?",
     ],
     "Sl-kort": [
         """Undrar du om hur skolan erbjuder Sl-kort? detta är ett exerpt från tumbagymnasium.se:
@@ -84,4 +81,6 @@ def detection_func(user_input, inputuser):
             Registration.RegFunc(str(inputuser))
         response = generate_response(issue_category)
         return response
-
+    else:
+        Registration.RegFunc(str(inputuser))
+        return "Tack för din ansökan!"
