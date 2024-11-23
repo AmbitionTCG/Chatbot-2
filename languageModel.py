@@ -81,7 +81,7 @@ def detection_func(user_input):
     if Registration.RegVar == False:
         issue_category = detect_issue(user_input)
         if issue_category == "registrera för prova på dag":
-            Registration.RegFunc(ui.user_input)
+            Registration.RegFunc(str(ui.user_input))
         response = generate_response(issue_category)
         return response
 

@@ -19,7 +19,7 @@ input_list = []
 
 def myUI():
 
-    global reset, message_row
+    global reset, message_row, user_input
 
 
 
