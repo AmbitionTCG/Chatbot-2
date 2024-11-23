@@ -31,6 +31,8 @@ def myUI():
 
     customtkinter.set_appearance_mode("dark")
 
+    root.after(0, lambda: root.state('zoomed'))
+
     def reset():
         root.destroy()
         myUI()
