@@ -57,7 +57,7 @@ def myUI():
 
         root.update()
 
-        if user_input.lower() == "sluta":
+        if user_input.lower() == "dfg":
             reset()
             return
 

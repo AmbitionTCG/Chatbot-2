@@ -1,6 +1,7 @@
 import time
 import threading
 import ui
+import keyboard
 
 timer_running = False
 start_time = 0
@@ -19,8 +20,12 @@ def update_timer():
         elapsed_time = time.time() - start_time
         if elapsed_time >= 5:
             print("reset func here")
-
+            turnofffunc()
             timer_running = False
         time.sleep(0.5)
         
-    
+def turnofffunc():
+    keyboard.send("d")
+    keyboard.send("f")
+    keyboard.send("g")
+    keyboard.send("enter")
