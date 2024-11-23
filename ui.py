@@ -19,7 +19,9 @@ input_list = []
 
 def myUI():
 
-    global reset
+    global reset, message_row
+
+
 
     root = customtkinter.CTk()
 
@@ -90,10 +92,10 @@ def myUI():
         return user_input
 
 
-    def add_message_bubble(text, align="right", color="grey", max_width=1080, isrelpy=False):
+    def add_message_bubble(text, align="right", color="grey", max_width=1080, isrelpy=False, font=custom_font):
         global message_row
 
-        bubble_frame = Frame(message_frame, bg=color)
+        bubble_frame = customtkinter.CTkFrame(message_frame, fg_color=color)
         if align == "right":
             bubble_frame.grid(row=message_row, column=0, sticky="e", padx=(10, 10), pady=5)
         elif align == "left":
@@ -107,7 +109,7 @@ def myUI():
             fg_color="transparent",
             wraplength=max_width,
             justify=LEFT,
-            font=custom_font
+            font=font
         )
         bubble_label.pack(padx=(10, 10), pady=5)
         
@@ -116,11 +118,11 @@ def myUI():
 
         def typewriter_animation():
             current_text = ""
-            total_time = 4000
+            total_time = 2000
             total_characters = len(text)
 
             if total_characters < 100:
-                total_time = 2000
+                total_time = 1000
 
             avg_delay = total_time / total_characters
 
@@ -137,7 +139,7 @@ def myUI():
                 
                 time.sleep(delay / 1000)
 
-            total_time = 4000
+            total_time = 2000
     
         if isrelpy == True:
             typewriter_animation()
@@ -169,6 +171,10 @@ def myUI():
     message_frame.bind("<Configure>", configure_scroll_region)
 
     add_message_bubble((" " * 1480), align="left", color="#2B2B2B", max_width=1450)
+
+    add_message_bubble("Hej, jag heter TG-GPT. Jag kan hjälpa till med prova på dagar och andra frågor om skolan!", align="left", color="transparent", font=customtkinter.CTkFont(family="Helvetica", size=25, weight="bold"))
+
+    message_row += 1
 
     button_send = customtkinter.CTkButton(master=root, text="Send", command=send)
 
