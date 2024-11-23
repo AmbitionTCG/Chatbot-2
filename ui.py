@@ -52,7 +52,6 @@ def myUI():
 
         entry.unbind("<Return>")
 
-        entry.configure(state="disabled")
         button_send.configure(state="disabled")
 
         add_message_bubble(user_input, align="right", color="grey", max_width=1280)
@@ -81,8 +80,7 @@ def myUI():
                 message_row += 1
                 print(message_row)
                 
-
-        entry.configure(state="normal")
+                
         button_send.configure(state="normal")    
 
         entry.bind("<Return>", send) 
