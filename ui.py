@@ -19,7 +19,7 @@ input_list = []
 
 def myUI():
 
-    global reset, user_input
+    global reset
 
     root = customtkinter.CTk()
 
@@ -37,6 +37,7 @@ def myUI():
         root.destroy()
         myUI()
 
+
     def send(user_input="", input_list=[], *args) -> str:
 
         global message_row
@@ -53,6 +54,11 @@ def myUI():
         button_send.configure(state="disabled")
 
         add_message_bubble(user_input, align="right", color="grey", max_width=1280)
+
+        chat_canvas.update_idletasks()
+        chat_canvas.yview_moveto(1.0)
+
+
         message_row += 1
         print(message_row)
     
@@ -72,19 +78,16 @@ def myUI():
                 running = False
                 message_row += 1
                 print(message_row)
-
-
-
-
-        entry.bind("<Return>", send)
+                
 
         entry.configure(state="normal")
-        button_send.configure(state="normal")     
+        button_send.configure(state="normal")    
+
+        entry.bind("<Return>", send) 
 
         input_list.append(user_input)
         ResetTimer.start_or_reset_timer()
         return user_input
-
 
 
     def add_message_bubble(text, align="right", color="grey", max_width=1080, isrelpy=False):
@@ -107,11 +110,10 @@ def myUI():
             font=custom_font
         )
         bubble_label.pack(padx=(10, 10), pady=5)
-
+        
         chat_canvas.update_idletasks()
         chat_canvas.yview_moveto(1.0)
-        
-        
+
         def typewriter_animation():
             current_text = ""
             total_time = 4000
@@ -134,7 +136,7 @@ def myUI():
                 delay = avg_delay * random.uniform(0.75, 1.25)
                 
                 time.sleep(delay / 1000)
-            
+
             total_time = 4000
     
         if isrelpy == True:
@@ -145,8 +147,7 @@ def myUI():
 
     def clear_text():
         entry.delete(0, "end")
-
-
+ 
 
 
     chat_canvas = Canvas(root, bg="#2B2B2B", highlightthickness=0)
@@ -177,7 +178,7 @@ def myUI():
 
     entry.place(relx=0.39, rely=0.9, anchor=CENTER)
 
-    root.bind("<Return>", send)
+    entry.bind("<Return>", send)
 
 
     root.mainloop()
@@ -186,4 +187,3 @@ def myUI():
 
 if __name__ == "__main__":
     myUI()
-
