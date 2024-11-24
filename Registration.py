@@ -3,11 +3,11 @@ import ui
 RegVar = False
 
 
-def RegFunc(write=""):
+def RegFunc(write="", issuecat=""):
 
     global RegVar
 
-    if write != "prova":
+    if issuecat != "registrera för prova på dag":
         with open('User_inputs.txt', 'a') as f:
             f.write('\n' + write)
             print("file succesfully written in!")
