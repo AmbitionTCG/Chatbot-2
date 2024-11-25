@@ -29,7 +29,7 @@ def myUI():
 
     customtkinter.set_default_color_theme("green")
 
-    custom_font = customtkinter.CTkFont(family="Helvetica", size=15, weight="bold")
+    custom_font = customtkinter.CTkFont(family="Helvetica", size=25, weight="bold")
 
     customtkinter.set_appearance_mode("dark")
 
@@ -134,7 +134,10 @@ def myUI():
                 bubble_label.configure(text=current_text)
                 bubble_label.update()
                 delay = avg_delay * random.uniform(0.75, 1.25)
-                
+
+                chat_canvas.update_idletasks()
+                chat_canvas.yview_moveto(1.0)
+
                 time.sleep(delay / 1000)
 
             total_time = 2000
@@ -170,15 +173,15 @@ def myUI():
 
     add_message_bubble((" " * 1480), align="left", color="#2B2B2B", max_width=1450)
 
-    add_message_bubble("Hej, jag heter TG-GPT. Jag kan hjälpa till med prova på dagar och andra frågor om skolan!", align="left", color="transparent", font=customtkinter.CTkFont(family="Helvetica", size=25, weight="bold"))
+    add_message_bubble("Hej, jag heter TG-GPT. Jag kan hjälpa till med prova på dagar och andra frågor om skolan!", align="left", color="transparent", font=customtkinter.CTkFont(family="Helvetica", size=30, weight="bold"))
 
     message_row += 1
 
-    button_send = customtkinter.CTkButton(master=root, text="Send", command=send)
+    button_send = customtkinter.CTkButton(master=root, text="Send", command=send, font=custom_font, height= 50, width=220)
 
-    button_send.place(relx=0.85, rely=0.9, anchor=CENTER)
+    button_send.place(relx=0.84, rely=0.9, anchor=CENTER)
 
-    entry = customtkinter.CTkEntry(master=root, placeholder_text="Skicka ett medalande till mig!", width=1020)
+    entry = customtkinter.CTkEntry(master=root, placeholder_text="Skicka ett medalande till mig!", width=1020, height= 50, font=custom_font)
 
     entry.place(relx=0.39, rely=0.9, anchor=CENTER)
 
