@@ -6,12 +6,18 @@ import random
 import Registration
 from Registration import RegVar
 
+
 anvandningar_lista = {
-    "registrera för prova på dag": ["prova",],
+    "registrera för prova på dag": ["prova på dag",],
     "FAQ": ["antagning","program","prov","kurs", "lektion",],
-    "SL-kort": ["SL", "bus", "tåg", "pendel"],
     "IND-val": ["ind", "individuella val"],
-    "Bibliotek":["bibliotek", "böker"]
+    "Bibliotek":["bibliotek", "böcker"],
+    "Hälsning":["hej", "goddag","tjena","tja","tjenare","halloj"],
+    "SL-kort": ["SL", "bus", "tåg", "pendel"],
+    "hur får jag mitt kort?": ["får jag mitt kort"],
+    "när gäller kortet?": ["gäller kortet"],
+    "vad händer om jag tappar bort mitt kort": ["tappar"]
+    
 }
 
 #måste finnas minst 3 svarsmöjligheter per lista annars kommer random choice bara välja den andra svarsmöjligheten
@@ -26,8 +32,20 @@ svars_lista = {
         "kul att du vill anmäla dig till en prova på dag, skriv nu ditt namn och mejladress så vi kan kontakta dig",
         "tack för ditt intresse för att prova på en dag hos tumba gymnasium, skriv nu ned ditt namn och mejladress så kontaktar vi dig"
     ],
+    "hälsning":[
+        "Goddag, vad skulle du vilja veta om tumba gymnasium? jag kan hjälpa med att registrera dig för en prova på dag också 😊 "
+    ],
+    "hur får jag mitt kort?":[
+        "Du köper ett kort på pressbyrån (20 kr). Värdekoden som skall tankas på kortet mejlas till elevens skolmejl."
+    ],
+    "när gäller kortet?":[
+        "Kortet gäller varje vardag (måndag till fredag) mellan 04:30 och 19:00."
+    ],
+    "Vad händer om jag tappar bort mitt kort":[
+        "För att ha gällande förlustgaranti så är det viktigt att registrera det Gröna kortet på SL:S hemsida. För att registrera kortet för förlustgaranti behöver du ha fyllt 16 år och ha BankID, är du under 16 år kan vårdnadshavare registrera kortet. Om du saknar BankID kan du få hjälp att registrera kortet hos våra kundtjänstbutiker på Sergels torg och Stockholms central."
+    ],
     "SL-kort": [
-        """Undrar du om hur skolan erbjuder Sl-kort? detta kan vara några saker att veta:
+        """Undrar du om hur skolan erbjuder Sl-kort? svar som jag kan svara på är:
 
 SL-kort (skolkort) är du berättigad till om din folkbokföringsadress är mer än 6 km från din skola och du är under 20 år. Vi mäter avståndet via google maps (gångväg)
 
@@ -35,15 +53,10 @@ VANLIGA FRÅGOR
 
 Hur får jag mitt kort?
 
-Du köper ett kort på pressbyrån (20 kr). Värdekoden som skall tankas på kortet mejlas till elevens skolmejl.
-
 När gäller kortet?
 
-Kortet gäller varje vardag (måndag till fredag) mellan 04:30 och 19:00
+Vad händer om jag tappar bort mitt kort?"""
 
-Vad händer om jag tappar bort mitt kort?
-
-För att ha gällande förlustgaranti så är det viktigt att registrera det Gröna kortet på SL:S hemsida. För att registrera kortet för förlustgaranti behöver du ha fyllt 16 år och ha BankID, är du under 16 år kan vårdnadshavare registrera kortet. Om du saknar BankID kan du få hjälp att registrera kortet hos våra kundtjänstbutiker på Sergels torg och Stockholms central."""
     ],
      "IND-val": [ 
         """Undrar du hur många IND-val kurser vi har har på tumba? har finns litte information om vårt sortiment.
