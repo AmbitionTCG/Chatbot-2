@@ -67,7 +67,7 @@ Här följer en del exempel:
 • Webbutveckling, webdesign, E-sport och programmering
 • Entreprenörskap och retorik
 • Idrottskurser så som friskvård, tjejidrott, fotboll, TG Toughest m.m
-• Engelska 7dfg
+• Engelska 7
 • Matematik 2,3,4 och 5
 • Beteendevetenskapliga kurser så som kriminologi, psykologi och sociologi """
     ],

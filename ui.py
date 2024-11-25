@@ -21,8 +21,6 @@ def myUI():
 
     global reset, message_row, user_input
 
-    timer = ResetTimer.ResetTimer()
-
     root = customtkinter.CTk()
 
     root.geometry("1920x1080")
@@ -86,7 +84,7 @@ def myUI():
         entry.bind("<Return>", send) 
 
         input_list.append(user_input)
-        timer.start_or_reset_timer()
+        ResetTimer.start_or_reset_timer()
         return user_input
 
 
