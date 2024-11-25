@@ -1,5 +1,4 @@
 from encodings.punycode import generate_generalized_integer
-from spellchecker import Spellchecker
 import ui
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
@@ -79,12 +78,9 @@ Fr 08.00-14.30"""
         
     }
 
-spell = Spellchecker(language='sv')
-
 #preprocess user input
 def preprocess_input(user_input):
-    corrected_input = "".join([spell.correction(word) for word in word_tokenize(user_input)])
-    tokens = word_tokenize(corrected_input)
+    tokens = word_tokenize(user_input)
     stop_words = set(stopwords.words('swedish'))
     filtered_tokens =[word for word in tokens if word not in stop_words]
     return filtered_tokens
