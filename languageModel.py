@@ -12,10 +12,10 @@ anvandningar_lista = {
     "FAQ": ["antagning","program","prov","kurs", "lektion",],
     "IND-val": ["ind", "individuella val"],
     "Bibliotek":["bibliotek", "böcker"],
-    "Hälsning":["hej", "goddag","tjena","tja","tjenare","halloj"],
+    "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj"],
     "SL-kort": ["SL", "bus", "tåg", "pendel"],
-    "hur får jag mitt kort?": ["får jag mitt kort"],
-    "när gäller kortet?": ["gäller kortet"],
+    "hur får jag mitt kort?": [""],
+    "när gäller kortet?": [""],
     "vad händer om jag tappar bort mitt kort": ["tappar"]
     
 }
@@ -41,7 +41,7 @@ svars_lista = {
     "när gäller kortet?":[
         "Kortet gäller varje vardag (måndag till fredag) mellan 04:30 och 19:00."
     ],
-    "Vad händer om jag tappar bort mitt kort":[
+    "vad händer om jag tappar bort mitt kort":[
         "För att ha gällande förlustgaranti så är det viktigt att registrera det Gröna kortet på SL:S hemsida. För att registrera kortet för förlustgaranti behöver du ha fyllt 16 år och ha BankID, är du under 16 år kan vårdnadshavare registrera kortet. Om du saknar BankID kan du få hjälp att registrera kortet hos våra kundtjänstbutiker på Sergels torg och Stockholms central."
     ],
     "SL-kort": [
