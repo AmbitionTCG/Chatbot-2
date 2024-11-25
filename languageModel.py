@@ -14,7 +14,7 @@ anvandningar_lista = {
     "Bibliotek":["bibliotek", "böcker"],
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj"],
     "SL-kort": ["SL", "bus", "tåg", "pendel"],
-    "hur får jag mitt kort?": [""],
+    "hur får jag mitt kort?": ["kort"],
     "när gäller kortet?": ["gäller"],
     "vad händer om jag tappar bort mitt kort": ["tappar"]
     
