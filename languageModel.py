@@ -12,7 +12,10 @@ anvandningar_lista = {
     "SL-kort": ["SL", "bus", "tåg", "pendel"],
     "hur får jag mitt kort?": ["kort"],
     "när gäller kortet?": ["gäller"],
-    "vad händer om jag tappar bort mitt kort": ["tappar"]
+    "vad händer om jag tappar bort mitt kort": ["tappar"],
+    "IND-val": ["ind", "individuella val"],
+    "Bibliotek":["bibliotek", "böcker"],
+    "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj"],
     
 }
 
@@ -28,6 +31,18 @@ svars_lista = {
         "kul att du vill anmäla dig till en prova på dag, skriv nu ditt namn och mejladress så vi kan kontakta dig",
         "tack för ditt intresse för att prova på en dag hos tumba gymnasium, skriv nu ned ditt namn och mejladress så kontaktar vi dig"
     ],
+     "hälsning":[
+        "Goddag, vad skulle du vilja veta om tumba gymnasium? jag kan hjälpa med att registrera dig för en prova på dag också 😊 "
+    ],
+    "hur får jag mitt kort?":[
+        "Du köper ett kort på pressbyrån (20 kr). Värdekoden som skall tankas på kortet mejlas till elevens skolmejl."
+    ],
+    "när gäller kortet?":[
+        "Kortet gäller varje vardag (måndag till fredag) mellan 04:30 och 19:00."
+    ],
+    "vad händer om jag tappar bort mitt kort":[
+        "För att ha gällande förlustgaranti så är det viktigt att registrera det Gröna kortet på SL:S hemsida. För att registrera kortet för förlustgaranti behöver du ha fyllt 16 år och ha BankID, är du under 16 år kan vårdnadshavare registrera kortet. Om du saknar BankID kan du få hjälp att registrera kortet hos våra kundtjänstbutiker på Sergels torg och Stockholms central."
+    ],
     "SL-kort": [
         """Undrar du om hur skolan erbjuder Sl-kort? detta kan vara några saker att veta:
 
@@ -37,9 +52,7 @@ VANLIGA FRÅGOR
 
 Hur får jag mitt kort?
 
-
 När gäller kortet?
-
 
 Vad händer om jag tappar bort mitt kort?"""
 ],
