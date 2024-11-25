@@ -8,14 +8,14 @@ from Registration import RegVar
 
 
 anvandningar_lista = {
-    "registrera för prova på dag": ["prova på dag",],
+    "registrera för prova på dag": ["prova",],
     "FAQ": ["antagning","program","prov","kurs", "lektion",],
     "IND-val": ["ind", "individuella val"],
     "Bibliotek":["bibliotek", "böcker"],
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj"],
     "SL-kort": ["SL", "bus", "tåg", "pendel"],
     "hur får jag mitt kort?": [""],
-    "när gäller kortet?": [""],
+    "när gäller kortet?": ["gäller"],
     "vad händer om jag tappar bort mitt kort": ["tappar"]
     
 }
