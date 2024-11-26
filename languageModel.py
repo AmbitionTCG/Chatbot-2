@@ -9,7 +9,7 @@ from Registration import RegVar
 anvandningar_lista = {
     "registrera för prova på dag": ["prova","testa", "registrera"],
     "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman"],
-    "SL-kort": ["SL", "bus", "tåg", "pendel"],
+    "SL-kort": ["SL", "bus", "tåg", "pendel", "sl"],
     "hur får jag mitt kort?": ["kort"],
     "när gäller kortet?": ["gäller"],
     "vad händer om jag tappar bort mitt kort": ["tappar"],
