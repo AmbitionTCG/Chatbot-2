@@ -19,7 +19,8 @@ anvandningar_lista = {
     "proecent tjejer": ["tjejer", "tjej", "procent", "andel"],
     "program": ["antagning", "program", "kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar", "linjer", "linje"],
     "merit": ["merit", "medelmerit", "betyg", "medelbetyg", "antagningsgräns", "antagning", "gräns", "median", "medelantagning"],
-    "hur får jag mitt kort?": ["kort"]
+    "hur får jag mitt kort?": ["kort"],
+    "plugg": ["tufft", "studier", "plugg", "plugga"]
 }
 
 #måste finnas minst 3 svarsmöjligheter per lista annars kommer random choice bara välja den andra svarsmöjligheten
@@ -92,7 +93,8 @@ Fr 08.00-14.30"""
     "merit": ["Antagninggränsen för teknikprogrammen var på 272.5-290, beroende på inriktning, vill du ha mer specifik information kan du kolla tumba gymnasiums websida eller fråga eleverna och lärarna i närheten."],
     "vad händer om jag tappar bort mitt kort":[
         "För att ha gällande förlustgaranti så är det viktigt att registrera det Gröna kortet på SL:S hemsida. För att registrera kortet för förlustgaranti behöver du ha fyllt 16 år och ha BankID, är du under 16 år kan vårdnadshavare registrera kortet. Om du saknar BankID kan du få hjälp att registrera kortet hos SLs kundtjänstbutiker på Sergels torg och Stockholms central."
-    ]
+    ],
+    "plugg":["Mängden du behöver plugga eller hur tufft du upplever programmet beror på många faktorer, därför kan jag inte ge dig ett konkret svar. Rekommenderar att prata med våra elever som är här på öppet hus för att se deras perspektiv. Att anmäla dig till en prova på dag genom mig kan också hjälpa dig eftersom då får du uppleva en dag av studier med våra teknikelever."]
     }
 
 #preprocess user input
