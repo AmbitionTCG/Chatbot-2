@@ -8,7 +8,6 @@ from Registration import RegVar
 
 anvandningar_lista = {
     "registrera för prova på dag": ["prova","testa", "registrera", "anmäla"],
-    "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "gammal", "elever"],
     "SL-kort": ["SL", "bus", "tåg", "pendel", "sl"],
     "vad händer om jag tappar bort mitt kort": ["tappar"],
     "IND-val": ["ind", "individuella val"],
@@ -21,6 +20,7 @@ anvandningar_lista = {
     "när gäller kortet?": ["gäller"],
     "hur får jag mitt kort?": ["kort"],
     "proecent tjejer": ["tjejer", "tjej", "procent", "andel"],
+"FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "gammal", "elever"],
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"]
 }
 
