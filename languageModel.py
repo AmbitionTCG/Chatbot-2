@@ -7,8 +7,8 @@ import Registration
 from Registration import RegVar
 
 anvandningar_lista = {
-    "registrera för prova på dag": ["prova",],
-    "FAQ": ["antagning","program","prov","kurs", "lektion",],
+    "registrera för prova på dag": ["prova","testa"],
+    "FAQ": ["antagning","program","prov","kurs","examination", "lektion",],
     "SL-kort": ["SL", "bus", "tåg", "pendel"],
     "hur får jag mitt kort?": ["kort"],
     "när gäller kortet?": ["gäller"],
