@@ -18,11 +18,13 @@ anvandningar_lista = {
     "sporter":["handboll", "hockey", "NIU", "LIU", "niu", "liu"],
     "när gäller kortet?": ["gäller"],
     "hur får jag mitt kort?": ["kort"],
-    "proecent tjejer": ["tjejer", "tjej", "procent", "andel"],
+    "procent tjejer": ["tjejer", "tjej", "procent", "andel"],
     "placering":["var", "vart"],
-    "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "ligger", "elever", "elev","datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "gammal", "elever", "rektor", "rektorn", "tg", "tumba", "Tumba"],
+    "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "ligger", "elever", "elev","datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "gammal", "elever", "tg", "tumba", "Tumba"],
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"],
-    "vad händer om jag tappar bort mitt kort": ["tappar"]
+    "vad händer om jag tappar bort mitt kort": ["tappar"],
+    "Tack": ["Tack", "tack"],
+    "Rektor": ["Rektor", "rektor"]
 }
 
 #måste finnas minst 3 svarsmöjligheter per lista annars kommer random choice bara välja den andra svarsmöjligheten
@@ -98,7 +100,9 @@ Fr 08.00-14.30"""
     ],
     "sporter":["Är du intresserad av våra NIU eller LIU program finns det elever och lärare tillgängliga som kan berätta mer information om de. Ifall du inte vet vart du ska hitta de, fråga gärna eleverna eller lärarna i närheten."],
     "plugg":["Mängden du behöver plugga eller hur tufft du upplever programmet beror på många faktorer, därför kan jag inte ge dig ett konkret svar. Rekommenderar att prata med våra elever som är här på öppet hus för att se deras perspektiv. Jag kan hjälpa dig med att anmäla dig till prova på dag, detta kan hjälppa dig genom att du då får uppleva en dag av studier med våra teknikelever."],
-    "placering":["Som du kan se är skolan vädligt nära Tumba centrum, vilket gör det enkelt att komma hit för både folk som åker buss och tåg. Bor du lokalt är det bara att gå hit för fots!"]
+    "placering":["Som du kan se är skolan vädligt nära Tumba centrum, vilket gör det enkelt att komma hit för både folk som åker buss och tåg. Bor du lokalt är det bara att gå hit för fots!"],
+    "Tack": ["Inga problem! Finns det något mer jag kan hjälpa med?"],
+    "Rektor": ["Alf Solander är vår GUD! Vi bön faller honom varje måltid och tackar honom för allt han gjort för tumba gymnasium!"]
     }
 
 #preprocess user input
