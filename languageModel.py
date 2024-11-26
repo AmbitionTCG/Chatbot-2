@@ -21,7 +21,7 @@ anvandningar_lista = {
     "plugg": ["tufft", "studier", "plugg", "plugga"],
     "sporter":["handboll", "hockey", "NIU", "LIU", "niu", "liu"],
     "när gäller kortet?": ["gäller"],
-    "hur får jag mitt kort?": ["kort"],
+    "hur får jag mitt kort?": ["kort"]
 }
 
 #måste finnas minst 3 svarsmöjligheter per lista annars kommer random choice bara välja den andra svarsmöjligheten
