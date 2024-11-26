@@ -8,7 +8,7 @@ from Registration import RegVar
 
 anvandningar_lista = {
     "registrera för prova på dag": ["prova","testa", "registrera"],
-    "FAQ": ["prov","examination", "lektion",],
+    "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman"],
     "SL-kort": ["SL", "bus", "tåg", "pendel"],
     "hur får jag mitt kort?": ["kort"],
     "när gäller kortet?": ["gäller"],
@@ -18,16 +18,16 @@ anvandningar_lista = {
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj"],
     "mat": ["skolmat", "matsal", "mat", "skolmaten"],
     "proecent tjejer": ["tjejer", "tjej", "procent", "andel"],
-    "program": ["antagning", "program", "kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar"]
-    
+    "program": ["antagning", "program", "kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar", "linjer", "linje"],
+    "merit": ["merit", "medelmerit", "betyg", "medelbetyg", "antagningsgräns", "antagning", "gräns", "median", "medelantagning"]
 }
 
 #måste finnas minst 3 svarsmöjligheter per lista annars kommer random choice bara välja den andra svarsmöjligheten
 svars_lista = {
     "FAQ": [
-        "Vi förstår att du kan ha specifika frågor som behöver hjälp. Besök vår hemsida för att få tillgång till våra supporttjänster eller kontakta oss direkt för personlig assistans på tumbagymnasium.se",
-        "Om du har specifika frågor, besök vår hemsida för information om våra program och andra resurser, eller använd kontaktsidan på tumbagymnasium.se för att nå vår personal direkt.",
-        "Behöver du hjälp med frågor? På vår hemsida hittar du information om vilka program vi erbjuder, och du kan också kontakta vår personal direkt via kontaktsidan på tumbagymnasium.se."
+        "Vi förstår att du kan ha specifika frågor som behöver hjälp. Besök vår hemsida för att få tillgång till våra supporttjänster eller kontakta oss direkt för personlig assistans på tumbagymnasium.se. Eller fråga eleverna och lärarna i närheten.",
+        "Om du har specifika frågor, besök vår hemsida för information om våra program och andra resurser, eller använd kontaktsidan på tumbagymnasium.se för att nå vår personal direkt. Eller fråga eleverna och lärarna i närheten.",
+        "Behöver du hjälp med frågor? På vår hemsida hittar du information om vilka program vi erbjuder, och du kan också kontakta vår personal direkt via kontaktsidan på tumbagymnasium.se. Eller fråga eleverna och lärarna i närheten."
     ],
     "registrera för prova på dag": [
         "du kan nu skriva in namn och mailadress så kan vi kontakta dig för att prova på en dag hos oss",
@@ -91,7 +91,8 @@ Fr 08.00-14.30"""
         ],
     "mat": ["Skolmaten är både varierad och gått, anses av våra många våra elever som det bästa skolmat de haft. Om du vill testa den kan du gärna anmäla dig till prova på dag genom mig, då kommer du kunna uppleva en hel dag som teknik elev, inklusive skolmaten."],
     "procent tjejer": ["Teknikprogrammet består av ungefär 30% tjejer, detta har ökat med varje år som går."],
-    "program": [" På teknikprogrammet har vi fyra inriktningar. De är teknikvetenskap, design- och produktutveckling, samhällsbyggande och miljö samt informations- och medieteknik. Om du har vidare frågor om dessa inriktningar fråga gärna eleverna eller lärarna i närheten."]
+    "program": [" På teknikprogrammet har vi fyra inriktningar. De är teknikvetenskap, design- och produktutveckling, samhällsbyggande och miljö samt informations- och medieteknik. Om du har vidare frågor om dessa inriktningar fråga gärna eleverna eller lärarna i närheten."],
+    "merit": ["Antagninggränsen för teknikprogrammen var på 272.5-290, beroende på inriktning, vill du ha mer specifik information kan du kolla tumba gymnasium websidan."]
     }
 
 #preprocess user input
