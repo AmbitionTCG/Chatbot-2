@@ -15,13 +15,13 @@ anvandningar_lista = {
     "Bibliotek":["bibliotek", "böcker"],
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"],
     "mat": ["skolmat", "matsal", "mat", "skolmaten", "lunch", "skollunch"],
-    "proecent tjejer": ["tjejer", "tjej", "procent", "andel"],
     "program": ["antagning", "program","programmet","kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar", "linjer", "linje", "linjen", "linjerna"],
     "merit": ["merit", "medelmerit", "betyg", "medelbetyg", "antagningsgräns", "antagning", "gräns", "median", "medelantagning"],
     "plugg": ["tufft", "studier", "plugg", "plugga"],
     "sporter":["handboll", "hockey", "NIU", "LIU", "niu", "liu"],
     "när gäller kortet?": ["gäller"],
-    "hur får jag mitt kort?": ["kort"]
+    "hur får jag mitt kort?": ["kort"],
+    "proecent tjejer": ["tjejer", "tjej", "procent", "andel"]
 }
 
 #måste finnas minst 3 svarsmöjligheter per lista annars kommer random choice bara välja den andra svarsmöjligheten
