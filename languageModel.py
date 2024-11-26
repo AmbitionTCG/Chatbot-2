@@ -8,25 +8,26 @@ from Registration import RegVar
 
 anvandningar_lista = {
     "registrera för prova på dag": ["prova","testa", "registrera"],
-    "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman"],
+    "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "gammal"],
     "SL-kort": ["SL", "bus", "tåg", "pendel", "sl"],
     "vad händer om jag tappar bort mitt kort": ["tappar"],
     "IND-val": ["ind", "individuella val"],
     "Bibliotek":["bibliotek", "böcker"],
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"],
-    "mat": ["skolmat", "matsal", "mat", "skolmaten"],
+    "mat": ["skolmat", "matsal", "mat", "skolmaten", "lunch", "skollunch"],
     "proecent tjejer": ["tjejer", "tjej", "procent", "andel"],
-    "program": ["antagning", "program", "kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar", "linjer", "linje"],
+    "program": ["antagning", "program","programmet","kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar", "linjer", "linje"],
     "merit": ["merit", "medelmerit", "betyg", "medelbetyg", "antagningsgräns", "antagning", "gräns", "median", "medelantagning"],
     "plugg": ["tufft", "studier", "plugg", "plugga"],
+    "sporter":["handboll", "hockey", "NIU", "LIU", "niu", "liu"],
     "när gäller kortet?": ["gäller"],
-    "hur får jag mitt kort?": ["kort"]
+    "hur får jag mitt kort?": ["kort"],
 }
 
 #måste finnas minst 3 svarsmöjligheter per lista annars kommer random choice bara välja den andra svarsmöjligheten
 svars_lista = {
     "FAQ": [
-        "Vi förstår att du kan ha specifika frågor som behöver hjälp. Besök vår hemsida för att få tillgång till våra supporttjänster eller kontakta oss direkt för personlig assistans på tumbagymnasium.se. Eller fråga eleverna och lärarna i närheten.",
+        "Jag förstår att du kan ha specifika frågor som behöver hjälp. Besök vår hemsida för att få tillgång till våra supporttjänster eller kontakta oss direkt för personlig assistans på tumbagymnasium.se. Eller fråga eleverna och lärarna i närheten.",
         "Om du har specifika frågor, besök vår hemsida för information om våra program och andra resurser, eller använd kontaktsidan på tumbagymnasium.se för att nå vår personal direkt. Eller fråga eleverna och lärarna i närheten.",
         "Behöver du hjälp med frågor? På vår hemsida hittar du information om vilka program vi erbjuder, och du kan också kontakta vår personal direkt via kontaktsidan på tumbagymnasium.se. Eller fråga eleverna och lärarna i närheten."
     ],
@@ -94,6 +95,7 @@ Fr 08.00-14.30"""
     "vad händer om jag tappar bort mitt kort":[
         "För att ha gällande förlustgaranti så är det viktigt att registrera det Gröna kortet på SL:S hemsida. För att registrera kortet för förlustgaranti behöver du ha fyllt 16 år och ha BankID, är du under 16 år kan vårdnadshavare registrera kortet. Om du saknar BankID kan du få hjälp att registrera kortet hos SLs kundtjänstbutiker på Sergels torg och Stockholms central."
     ],
+    "sporter":["Är du intresserad av våra NIU eller LIU program finns det elever och lärare tillgängliga som kan berätta mer information om de. Ifall du inte vet vart du ska hitta de, fråga gärna eleverna eller lärarna i närheten."],
     "plugg":["Mängden du behöver plugga eller hur tufft du upplever programmet beror på många faktorer, därför kan jag inte ge dig ett konkret svar. Rekommenderar att prata med våra elever som är här på öppet hus för att se deras perspektiv. Jag kan hjälpa dig med att anmäla dig till prova på dag, detta kan hjälppa dig genom att du då får uppleva en dag av studier med våra teknikelever."]
     }
 
