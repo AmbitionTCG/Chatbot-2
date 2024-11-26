@@ -14,7 +14,7 @@ anvandningar_lista = {
     "vad händer om jag tappar bort mitt kort": ["tappar"],
     "IND-val": ["ind", "individuella val"],
     "Bibliotek":["bibliotek", "böcker"],
-    "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj"],
+    "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"],
     "mat": ["skolmat", "matsal", "mat", "skolmaten"],
     "proecent tjejer": ["tjejer", "tjej", "procent", "andel"],
     "program": ["antagning", "program", "kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar", "linjer", "linje"],
