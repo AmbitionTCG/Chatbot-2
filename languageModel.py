@@ -12,15 +12,15 @@ anvandningar_lista = {
     "vad händer om jag tappar bort mitt kort": ["tappar"],
     "IND-val": ["ind", "individuella"],
     "Bibliotek":["bibliotek", "böcker", "biblioteket"],
-    "mat": ["skolmat", "matsal", "mat", "skolmaten", "lunch", "skollunch"],
-    "program": ["antagning", "program","programmet","kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar", "linjer", "linje", "linjen", "linjerna"],
+    "mat": ["skolmat", "matsal", "mat", "skolmaten", "lunch", "skollunch", "maten"],
+    "program": ["antagning", "program","programmet","kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar", "linjer", "linje", "linjen", "linjerna","it", "IT"],
     "merit": ["merit", "medelmerit", "betyg", "medelbetyg", "antagningsgräns", "antagning", "gräns", "median", "medelantagning"],
     "plugg": ["tufft", "studier", "plugg", "plugga"],
     "sporter":["handboll", "hockey", "NIU", "LIU", "niu", "liu"],
     "när gäller kortet?": ["gäller"],
     "hur får jag mitt kort?": ["kort"],
     "proecent tjejer": ["tjejer", "tjej", "procent", "andel"],
-    "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "gammal", "elever", "rektor", "rektorn", "tg", "tumba", "Tumba"],
+    "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "ligger", "elever", "elev","datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "gammal", "elever", "rektor", "rektorn", "tg", "tumba", "Tumba"],
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"]
 }
 
