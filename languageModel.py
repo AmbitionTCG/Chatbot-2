@@ -20,7 +20,7 @@ anvandningar_lista = {
     "när gäller kortet?": ["gäller"],
     "hur får jag mitt kort?": ["kort"],
     "proecent tjejer": ["tjejer", "tjej", "procent", "andel"],
-    "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "gammal", "elever", "rektor"],
+    "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "gammal", "elever", "rektor", "rektorn"],
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"]
 }
 
