@@ -21,7 +21,7 @@ def update_timer():
         with open('timerfile.txt', 'r') as d:
             content = d.read()
         elapsed_time = time.time() - float(content)
-        if elapsed_time >= 30:
+        if elapsed_time >= 60:
             print("reset func here")
             turnofffunc()
             timer_running = False
