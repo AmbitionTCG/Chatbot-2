@@ -92,7 +92,7 @@ Fr 08.00-14.30"""
     "mat": ["Skolmaten är både varierad och gått, anses av våra många våra elever som det bästa skolmat de haft. Om du vill testa den kan du gärna anmäla dig till prova på dag genom mig, då kommer du kunna uppleva en hel dag som teknik elev, inklusive skolmaten."],
     "procent tjejer": ["Teknikprogrammet består av ungefär 30% tjejer, detta har ökat med varje år som går."],
     "program": [" På teknikprogrammet har vi fyra inriktningar. De är teknikvetenskap, design- och produktutveckling, samhällsbyggande och miljö samt informations- och medieteknik. Om du har vidare frågor om dessa inriktningar fråga gärna eleverna eller lärarna i närheten."],
-    "merit": ["Antagninggränsen för teknikprogrammen var på 272.5-290, beroende på inriktning, vill du ha mer specifik information kan du kolla tumba gymnasium websidan."]
+    "merit": ["Antagninggränsen för teknikprogrammen var på 272.5-290, beroende på inriktning, vill du ha mer specifik information kan du kolla tumba gymnasiums websida eller fråga eleverna och lärarna i närheten."]
     }
 
 #preprocess user input
