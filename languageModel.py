@@ -20,7 +20,7 @@ anvandningar_lista = {
     "när gäller kortet?": ["gäller"],
     "hur får jag mitt kort?": ["kort"],
     "proecent tjejer": ["tjejer", "tjej", "procent", "andel"],
-    "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "gammal", "elever"],
+    "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "gammal", "elever", "rektor"],
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"]
 }
 
@@ -32,9 +32,9 @@ svars_lista = {
         "Behöver du hjälp med frågor? På vår hemsida hittar du information om vilka program vi erbjuder, och du kan också kontakta vår personal direkt via kontaktsidan på tumbagymnasium.se. Eller fråga eleverna och lärarna i närheten."
     ],
     "registrera för prova på dag": [
-        "Du kan nu skriva in namn och mailadress så kan vi kontakta dig för att prova på en dag hos oss",
-        "Kul att du vill anmäla dig till en prova på dag, skriv nu ditt namn och mejladress så vi kan kontakta dig",
-        "Kack för ditt intresse för att prova på en dag hos tumba gymnasium, skriv nu ned ditt namn och mejladress så kontaktar vi dig"
+        "Du kan nu skriva in förnamn, efternamn och mailadress så kan vi kontakta dig för att prova på en dag hos oss",
+        "Kul att du vill anmäla dig till en prova på dag, skriv nu ditt förnamn, efternamn och mejladress så vi kan kontakta dig",
+        "Tack för ditt intresse för att prova på en dag hos tumba gymnasium, skriv nu ned ditt förnamn, efternamn och mejladress så kontaktar vi dig"
     ],
      "hälsning":[
         "Goddag, vad skulle du vilja veta om tumba gymnasium? Jag kan hjälpa med att registrera dig för en prova på dag också 😊 "
