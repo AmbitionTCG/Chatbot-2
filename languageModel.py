@@ -8,14 +8,17 @@ from Registration import RegVar
 
 anvandningar_lista = {
     "registrera för prova på dag": ["prova","testa", "registrera"],
-    "FAQ": ["antagning","program","prov","kurs","examination", "lektion",],
+    "FAQ": ["prov","examination", "lektion",],
     "SL-kort": ["SL", "bus", "tåg", "pendel"],
     "hur får jag mitt kort?": ["kort"],
     "när gäller kortet?": ["gäller"],
     "vad händer om jag tappar bort mitt kort": ["tappar"],
     "IND-val": ["ind", "individuella val"],
     "Bibliotek":["bibliotek", "böcker"],
-    "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj"],
+    "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj"],
+    "mat": ["skolmat", "matsal", "mat", "skolmaten"],
+    "proecent tjejer": ["tjejer", "tjej", "procent", "andel"],
+    "program": ["antagning", "program", "kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar"]
     
 }
 
@@ -85,8 +88,10 @@ Ti 10.00-16.00 (mattestöd 09.00-10.00, studiepass 16.00-17.00)
 On 08.00-15.00
 To 08.00-16.00 (studiepass 16.00-17.00)
 Fr 08.00-14.30"""
-        ]
-        
+        ],
+    "mat": ["Skolmaten är både varierad och gått, anses av våra många våra elever som det bästa skolmat de haft. Om du vill testa den kan du gärna anmäla dig till prova på dag genom mig, då kommer du kunna uppleva en hel dag som teknik elev, inklusive skolmaten."],
+    "procent tjejer": ["Teknikprogrammet består av ungefär 30% tjejer, detta har ökat med varje år som går."],
+    "program": [" På teknikprogrammet har vi fyra inriktningar. De är teknikvetenskap, design- och produktutveckling, samhällsbyggande och miljö samt informations- och medieteknik. Om du har vidare frågor om dessa inriktningar fråga gärna eleverna eller lärarna i närheten."]
     }
 
 #preprocess user input
@@ -109,7 +114,7 @@ def generate_response(issue_category):
     if issue_category in svars_lista:
         return random.choice(svars_lista[issue_category])
     else:
-        return ("Ber om ursäkt, men jag kan inte hjälpa dig med det. Jag kan hjälpa dig med att registrera för prova på dagar eller kanske har du andra frågor om skolan?")
+        return ("Ber om ursäkt, men jag kan inte hjälpa dig med det. Kolla din stavning eftersom jag inte fattar stavfel. Jag kan hjälpa dig med att registrera för prova på dagar eller kanske har du andra frågor om skolan?")
 
 def detection_func(user_input, inputuser):
     if Registration.RegVar == False:
