@@ -69,7 +69,7 @@ def myUI():
             return
 
 
-        bot_reply = f"Bot says: {languageModel.detection_func(user_input, user_input)}"
+        bot_reply = f"{languageModel.detection_func(user_input, user_input)}"
         running = True
         while running:
             if (time.time() - timenow) > 0.5:
