@@ -10,7 +10,7 @@ anvandningar_lista = {
     "registrera för prova på dag": ["prova","testa", "registrera", "anmäla"],
     "SL-kort": ["SL", "bus", "tåg", "pendel", "sl"],
     "vad händer om jag tappar bort mitt kort": ["tappar"],
-    "IND-val": ["ind", "individuella val"],
+    "IND-val": ["ind", "individuella"],
     "Bibliotek":["bibliotek", "böcker", "biblioteket"],
     "mat": ["skolmat", "matsal", "mat", "skolmaten", "lunch", "skollunch"],
     "program": ["antagning", "program","programmet","kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar", "linjer", "linje", "linjen", "linjerna"],
@@ -20,7 +20,7 @@ anvandningar_lista = {
     "när gäller kortet?": ["gäller"],
     "hur får jag mitt kort?": ["kort"],
     "proecent tjejer": ["tjejer", "tjej", "procent", "andel"],
-    "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "gammal", "elever", "rektor", "rektorn"],
+    "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "gammal", "elever", "rektor", "rektorn", "tg", "tumba", "Tumba"],
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"]
 }
 
