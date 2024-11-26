@@ -10,7 +10,6 @@ anvandningar_lista = {
     "registrera för prova på dag": ["prova","testa", "registrera"],
     "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman"],
     "SL-kort": ["SL", "bus", "tåg", "pendel", "sl"],
-    "när gäller kortet?": ["gäller"],
     "vad händer om jag tappar bort mitt kort": ["tappar"],
     "IND-val": ["ind", "individuella val"],
     "Bibliotek":["bibliotek", "böcker"],
@@ -19,8 +18,9 @@ anvandningar_lista = {
     "proecent tjejer": ["tjejer", "tjej", "procent", "andel"],
     "program": ["antagning", "program", "kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar", "linjer", "linje"],
     "merit": ["merit", "medelmerit", "betyg", "medelbetyg", "antagningsgräns", "antagning", "gräns", "median", "medelantagning"],
-    "hur får jag mitt kort?": ["kort"],
-    "plugg": ["tufft", "studier", "plugg", "plugga"]
+    "plugg": ["tufft", "studier", "plugg", "plugga"],
+    "när gäller kortet?": ["gäller"],
+    "hur får jag mitt kort?": ["kort"]
 }
 
 #måste finnas minst 3 svarsmöjligheter per lista annars kommer random choice bara välja den andra svarsmöjligheten
