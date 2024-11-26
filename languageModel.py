@@ -10,7 +10,6 @@ anvandningar_lista = {
     "registrera för prova på dag": ["prova","testa", "registrera"],
     "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman"],
     "SL-kort": ["SL", "bus", "tåg", "pendel", "sl"],
-    "hur får jag mitt kort?": ["kort"],
     "när gäller kortet?": ["gäller"],
     "vad händer om jag tappar bort mitt kort": ["tappar"],
     "IND-val": ["ind", "individuella val"],
@@ -19,7 +18,8 @@ anvandningar_lista = {
     "mat": ["skolmat", "matsal", "mat", "skolmaten"],
     "proecent tjejer": ["tjejer", "tjej", "procent", "andel"],
     "program": ["antagning", "program", "kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar", "linjer", "linje"],
-    "merit": ["merit", "medelmerit", "betyg", "medelbetyg", "antagningsgräns", "antagning", "gräns", "median", "medelantagning"]
+    "merit": ["merit", "medelmerit", "betyg", "medelbetyg", "antagningsgräns", "antagning", "gräns", "median", "medelantagning"],
+    "hur får jag mitt kort?": ["kort"]
 }
 
 #måste finnas minst 3 svarsmöjligheter per lista annars kommer random choice bara välja den andra svarsmöjligheten
@@ -42,9 +42,6 @@ svars_lista = {
     ],
     "när gäller kortet?":[
         "Kortet gäller varje vardag (måndag till fredag) mellan 04:30 och 19:00."
-    ],
-    "vad händer om jag tappar bort mitt kort":[
-        "För att ha gällande förlustgaranti så är det viktigt att registrera det Gröna kortet på SL:S hemsida. För att registrera kortet för förlustgaranti behöver du ha fyllt 16 år och ha BankID, är du under 16 år kan vårdnadshavare registrera kortet. Om du saknar BankID kan du få hjälp att registrera kortet hos våra kundtjänstbutiker på Sergels torg och Stockholms central."
     ],
     "SL-kort": [
         """Undrar du om hur skolan erbjuder Sl-kort? detta kan vara några saker att veta:
@@ -92,7 +89,10 @@ Fr 08.00-14.30"""
     "mat": ["Skolmaten är både varierad och gått, anses av våra många våra elever som det bästa skolmat de haft. Om du vill testa den kan du gärna anmäla dig till prova på dag genom mig, då kommer du kunna uppleva en hel dag som teknik elev, inklusive skolmaten."],
     "procent tjejer": ["Teknikprogrammet består av ungefär 30% tjejer, detta har ökat med varje år som går."],
     "program": [" På teknikprogrammet har vi fyra inriktningar. De är teknikvetenskap, design- och produktutveckling, samhällsbyggande och miljö samt informations- och medieteknik. Om du har vidare frågor om dessa inriktningar fråga gärna eleverna eller lärarna i närheten."],
-    "merit": ["Antagninggränsen för teknikprogrammen var på 272.5-290, beroende på inriktning, vill du ha mer specifik information kan du kolla tumba gymnasiums websida eller fråga eleverna och lärarna i närheten."]
+    "merit": ["Antagninggränsen för teknikprogrammen var på 272.5-290, beroende på inriktning, vill du ha mer specifik information kan du kolla tumba gymnasiums websida eller fråga eleverna och lärarna i närheten."],
+    "vad händer om jag tappar bort mitt kort":[
+        "För att ha gällande förlustgaranti så är det viktigt att registrera det Gröna kortet på SL:S hemsida. För att registrera kortet för förlustgaranti behöver du ha fyllt 16 år och ha BankID, är du under 16 år kan vårdnadshavare registrera kortet. Om du saknar BankID kan du få hjälp att registrera kortet hos SLs kundtjänstbutiker på Sergels torg och Stockholms central."
+    ]
     }
 
 #preprocess user input
