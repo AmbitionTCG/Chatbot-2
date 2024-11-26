@@ -171,7 +171,7 @@ def myUI():
 
     add_message_bubble((" " * 1480), align="left", color="#2B2B2B", max_width=1450)
 
-    add_message_bubble("Hej, jag heter TG-GPT. Jag kan hjälpa till med prova på dagar och andra frågor om skolan!", align="left", color="transparent", font=customtkinter.CTkFont(family="Helvetica", size=30, weight="bold"))
+    add_message_bubble("Hej, jag heter TG-GPT. Jag kan hjälpa till med anmälan till prova på dagar och andra frågor om skolan!", align="left", color="transparent", font=customtkinter.CTkFont(family="Helvetica", size=30, weight="bold"))
 
     message_row += 1
 
