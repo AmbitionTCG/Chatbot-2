@@ -9,7 +9,6 @@ from Registration import RegVar
 anvandningar_lista = {
     "registrera för prova på dag": ["prova","testa", "registrera", "anmäla"],
     "SL-kort": ["SL", "bus", "tåg", "pendel", "sl"],
-    "vad händer om jag tappar bort mitt kort": ["tappar"],
     "IND-val": ["ind", "individuella"],
     "Bibliotek":["bibliotek", "böcker", "biblioteket"],
     "mat": ["skolmat", "matsal", "mat", "skolmaten", "lunch", "skollunch", "maten"],
@@ -21,7 +20,8 @@ anvandningar_lista = {
     "hur får jag mitt kort?": ["kort"],
     "proecent tjejer": ["tjejer", "tjej", "procent", "andel"],
     "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "ligger", "elever", "elev","datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "gammal", "elever", "rektor", "rektorn", "tg", "tumba", "Tumba"],
-    "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"]
+    "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"],
+    "vad händer om jag tappar bort mitt kort": ["tappar"]
 }
 
 #måste finnas minst 3 svarsmöjligheter per lista annars kommer random choice bara välja den andra svarsmöjligheten
