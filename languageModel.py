@@ -94,7 +94,7 @@ Fr 08.00-14.30"""
     "vad händer om jag tappar bort mitt kort":[
         "För att ha gällande förlustgaranti så är det viktigt att registrera det Gröna kortet på SL:S hemsida. För att registrera kortet för förlustgaranti behöver du ha fyllt 16 år och ha BankID, är du under 16 år kan vårdnadshavare registrera kortet. Om du saknar BankID kan du få hjälp att registrera kortet hos SLs kundtjänstbutiker på Sergels torg och Stockholms central."
     ],
-    "plugg":["Mängden du behöver plugga eller hur tufft du upplever programmet beror på många faktorer, därför kan jag inte ge dig ett konkret svar. Rekommenderar att prata med våra elever som är här på öppet hus för att se deras perspektiv. Att anmäla dig till en prova på dag genom mig kan också hjälpa dig eftersom då får du uppleva en dag av studier med våra teknikelever."]
+    "plugg":["Mängden du behöver plugga eller hur tufft du upplever programmet beror på många faktorer, därför kan jag inte ge dig ett konkret svar. Rekommenderar att prata med våra elever som är här på öppet hus för att se deras perspektiv. Jag kan hjälpa dig med att anmäla dig till prova på dag, detta kan hjälppa dig genom att du då får uppleva en dag av studier med våra teknikelever."]
     }
 
 #preprocess user input
