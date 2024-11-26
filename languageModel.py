@@ -1,10 +1,9 @@
 from encodings.punycode import generate_generalized_integer
-import ui
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import random
 import Registration
-from Registration import RegVar
+
 
 anvandningar_lista = {
     "registrera för prova på dag": ["prova","testa", "registrera", "anmäla"],
@@ -19,7 +18,7 @@ anvandningar_lista = {
     "när gäller kortet?": ["gäller"],
     "hur får jag mitt kort?": ["kort"],
     "procent tjejer": ["tjejer", "tjej", "procent", "andel"],
-    "placering":["var", "vart"],
+    "1974":["gammal", "årtal", "jubeleum"],
     "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "ligger", "elever", "elev","datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "gammal", "elever", "tg", "tumba", "Tumba"],
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"],
     "vad händer om jag tappar bort mitt kort": ["tappar"],
@@ -27,15 +26,15 @@ anvandningar_lista = {
     "Rektor": ["Rektor", "rektor"]
 }
 
-#måste finnas minst 3 svarsmöjligheter per lista annars kommer random choice bara välja den andra svarsmöjligheten
+
 svars_lista = {
     "FAQ": [
-        "Jag förstår att du kan ha specifika frågor som behöver hjälp. Besök vår hemsida för att få tillgång till våra supporttjänster eller kontakta oss direkt för personlig assistans på tumbagymnasium.se. Eller fråga eleverna och lärarna i närheten.",
-        "Om du har specifika frågor, besök vår hemsida för information om våra program och andra resurser, eller använd kontaktsidan på tumbagymnasium.se för att nå vår personal direkt. Eller fråga eleverna och lärarna i närheten.",
-        "Behöver du hjälp med frågor? På vår hemsida hittar du information om vilka program vi erbjuder, och du kan också kontakta vår personal direkt via kontaktsidan på tumbagymnasium.se. Eller fråga eleverna och lärarna i närheten."
+        "Jag förstår att du kan ha specifika frågor som du behöver hjälp med. Fråga en av eleverna eller lärarna i närheten!",
+        "Jag kan inte hjäpa med allt. Fråga en av eleverna eller lärarna i närheten, de kan svara på det mesta!",
+        "Jag kan inte savar på den frågan men jag kan anmäla dig till en prova på dag!"
     ],
     "registrera för prova på dag": [
-        "Du kan nu skriva in förnamn, efternamn och mailadress så kan vi kontakta dig för att prova på en dag hos oss",
+        "Du kan nu skriva in förnamn, efternamn och mejladress så kan vi kontakta dig för att prova på en dag hos oss",
         "Kul att du vill anmäla dig till en prova på dag, skriv nu ditt förnamn, efternamn och mejladress så vi kan kontakta dig",
         "Tack för ditt intresse för att prova på en dag hos tumba gymnasium, skriv nu ned ditt förnamn, efternamn och mejladress så kontaktar vi dig"
     ],
@@ -43,7 +42,7 @@ svars_lista = {
         "Goddag, vad skulle du vilja veta om tumba gymnasium? Jag kan hjälpa med att registrera dig för en prova på dag också 😊 "
     ],
     "hur får jag mitt kort?":[
-        "Du köper ett kort på pressbyrån (20 kr). Värdekoden som skall tankas på kortet mejlas till elevens skolmejl."
+        "Om du bor tillräckligt långt bort kommer du få ett brev hem i brevlådan med ett SL-kort och en värdekod"
     ],
     "när gäller kortet?":[
         "Kortet gäller varje vardag (måndag till fredag) mellan 04:30 och 19:00."
@@ -65,7 +64,7 @@ Vad händer om jag tappar bort mitt kort?"""
         """Undrar du hur många IND-val kurser vi har har på tumba? har finns litte information om vårt sortiment.
 Tumba Gymnasium är en stor skola med många olika program därför kan vi erbjuda ett stort utbud av IND- val.
 
-Här följer en del exempel:
+Några exempel:
 
 • Moderna språk steg 1,2,3,4 och 5
 • Estetiska kurser så som bild, foto, film, scenisk gestaltning, radio, fotografi, körsång och dans.
@@ -91,7 +90,7 @@ On 08.00-15.00
 To 08.00-16.00 (studiepass 16.00-17.00)
 Fr 08.00-14.30"""
         ],
-    "mat": ["Skolmaten är både varierad och gått, anses av våra många våra elever som det bästa skolmat de haft. Om du vill testa den kan du gärna anmäla dig till prova på dag genom mig, då kommer du kunna uppleva en hel dag som teknik elev, inklusive skolmaten."],
+    "mat": ["Skolmaten är både varierad och god. Om du vill testa den kan du anmäla dig till ne prova på dag genom mig. Då kommer du kunna uppleva en hel dag som teknik elev, inklusive skolmaten!"],
     "procent tjejer": ["Teknikprogrammet består av ungefär 30% tjejer, detta har ökat med varje år som går."],
     "program": [" På teknikprogrammet har vi fyra inriktningar. De är teknikvetenskap, design- och produktutveckling, samhällsbyggande och miljö samt informations- och medieteknik. Om du har vidare frågor om dessa inriktningar fråga gärna eleverna eller lärarna i närheten."],
     "merit": ["Antagninggränsen för teknikprogrammen var på 272.5-290, beroende på inriktning, vill du ha mer specifik information kan du kolla tumba gymnasiums websida eller fråga eleverna och lärarna i närheten."],
@@ -99,10 +98,10 @@ Fr 08.00-14.30"""
         "För att ha gällande förlustgaranti så är det viktigt att registrera det Gröna kortet på SL:S hemsida. För att registrera kortet för förlustgaranti behöver du ha fyllt 16 år och ha BankID, är du under 16 år kan vårdnadshavare registrera kortet. Om du saknar BankID kan du få hjälp att registrera kortet hos SLs kundtjänstbutiker på Sergels torg och Stockholms central."
     ],
     "sporter":["Är du intresserad av våra NIU eller LIU program finns det elever och lärare tillgängliga som kan berätta mer information om de. Ifall du inte vet vart du ska hitta de, fråga gärna eleverna eller lärarna i närheten."],
-    "plugg":["Mängden du behöver plugga eller hur tufft du upplever programmet beror på många faktorer, därför kan jag inte ge dig ett konkret svar. Rekommenderar att prata med våra elever som är här på öppet hus för att se deras perspektiv. Jag kan hjälpa dig med att anmäla dig till prova på dag, detta kan hjälppa dig genom att du då får uppleva en dag av studier med våra teknikelever."],
-    "placering":["Som du kan se är skolan vädligt nära Tumba centrum, vilket gör det enkelt att komma hit för både folk som åker buss och tåg. Bor du lokalt är det bara att gå hit för fots!"],
+    "plugg":["Mängden du behöver plugga eller hur tufft du upplever programmet beror på många faktorer, därför kan jag inte ge dig ett konkret svar. Rekommenderar att prata med våra elever som är här på öppethus för att se deras perspektiv. Jag kan hjälpa dig med att anmäla dig till prova på dag, detta kan hjälppa dig genom att du då får uppleva en dag av studier med våra teknikelever."],
+    "1974":["Tumba gymnasium grundades 1974, vi fyller 50 år!"],
     "Tack": ["Inga problem! Finns det något mer jag kan hjälpa med?"],
-    "Rektor": ["Alf Solander är vår GUD! Vi bön faller honom varje måltid och tackar honom för allt han gjort för tumba gymnasium!"]
+    "Rektor": ["Alf Solander är vår GUD! Vi bön faller honom varje måltid och tackar honom för allt han gjort för Tumba gymnasium!"]
     }
 
 #preprocess user input
