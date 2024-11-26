@@ -16,7 +16,7 @@ anvandningar_lista = {
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"],
     "mat": ["skolmat", "matsal", "mat", "skolmaten", "lunch", "skollunch"],
     "proecent tjejer": ["tjejer", "tjej", "procent", "andel"],
-    "program": ["antagning", "program","programmet","kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar", "linjer", "linje"],
+    "program": ["antagning", "program","programmet","kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar", "linjer", "linje", "linjen", "linjerna"],
     "merit": ["merit", "medelmerit", "betyg", "medelbetyg", "antagningsgräns", "antagning", "gräns", "median", "medelantagning"],
     "plugg": ["tufft", "studier", "plugg", "plugga"],
     "sporter":["handboll", "hockey", "NIU", "LIU", "niu", "liu"],
