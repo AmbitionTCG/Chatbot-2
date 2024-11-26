@@ -19,6 +19,7 @@ anvandningar_lista = {
     "när gäller kortet?": ["gäller"],
     "hur får jag mitt kort?": ["kort"],
     "proecent tjejer": ["tjejer", "tjej", "procent", "andel"],
+    "placering":["var", "vart"],
     "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "ligger", "elever", "elev","datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "gammal", "elever", "rektor", "rektorn", "tg", "tumba", "Tumba"],
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"],
     "vad händer om jag tappar bort mitt kort": ["tappar"]
@@ -96,7 +97,8 @@ Fr 08.00-14.30"""
         "För att ha gällande förlustgaranti så är det viktigt att registrera det Gröna kortet på SL:S hemsida. För att registrera kortet för förlustgaranti behöver du ha fyllt 16 år och ha BankID, är du under 16 år kan vårdnadshavare registrera kortet. Om du saknar BankID kan du få hjälp att registrera kortet hos SLs kundtjänstbutiker på Sergels torg och Stockholms central."
     ],
     "sporter":["Är du intresserad av våra NIU eller LIU program finns det elever och lärare tillgängliga som kan berätta mer information om de. Ifall du inte vet vart du ska hitta de, fråga gärna eleverna eller lärarna i närheten."],
-    "plugg":["Mängden du behöver plugga eller hur tufft du upplever programmet beror på många faktorer, därför kan jag inte ge dig ett konkret svar. Rekommenderar att prata med våra elever som är här på öppet hus för att se deras perspektiv. Jag kan hjälpa dig med att anmäla dig till prova på dag, detta kan hjälppa dig genom att du då får uppleva en dag av studier med våra teknikelever."]
+    "plugg":["Mängden du behöver plugga eller hur tufft du upplever programmet beror på många faktorer, därför kan jag inte ge dig ett konkret svar. Rekommenderar att prata med våra elever som är här på öppet hus för att se deras perspektiv. Jag kan hjälpa dig med att anmäla dig till prova på dag, detta kan hjälppa dig genom att du då får uppleva en dag av studier med våra teknikelever."],
+    "placering":["Som du kan se är skolan vädligt nära Tumba centrum, vilket gör det enkelt att komma hit för både folk som åker buss och tåg. Bor du lokalt är det bara att gå hit för fots!"]
     }
 
 #preprocess user input
