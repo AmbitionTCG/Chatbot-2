@@ -127,7 +127,7 @@ def detection_func(user_input, inputuser):
     if Registration.RegVar == False:
         issue_category = detect_issue(user_input)
         if issue_category == "registrera för prova på dag":
-            Registration.RegFunc(str(inputuser), issue_category)
+            Registration.process_and_save_to_excel(str(inputuser), issue_category)
         response = generate_response(issue_category)
         return response
     else:

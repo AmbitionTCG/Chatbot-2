@@ -2,11 +2,14 @@ click==8.1.7
 colorama==0.4.6
 customtkinter==5.2.2
 darkdetect==0.8.0
+et_xmlfile==2.0.0
 joblib==1.4.2
 keyboard==0.13.5
 Levenshtein==0.26.1
 nltk==3.9.1
+openpyxl==3.1.5
 packaging==24.2
+pyspellchecker==0.8.1
 python-Levenshtein==0.26.1
 RapidFuzz==3.10.1
 regex==2024.11.6
