@@ -11,19 +11,19 @@ anvandningar_lista = {
     "IND-val": ["ind", "individuella"],
     "Bibliotek":["bibliotek", "böcker", "biblioteket"],
     "mat": ["skolmat", "matsal", "mat", "skolmaten", "lunch", "skollunch", "maten"],
-    "program": ["antagning", "program","programmet","kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar", "linjer", "linje", "linjen", "linjerna","it", "IT"],
+    "program": ["teknik","antagning", "program","programmet","kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar", "linjer", "linje", "linjen", "linjerna","it", "IT"],
     "merit": ["merit", "medelmerit", "betyg", "medelbetyg", "antagningsgräns", "antagning", "gräns", "median", "medelantagning", "poäng", "meritpoäng"],
     "plugg": ["tufft", "studier", "plugg", "plugga"],
     "sporter":["handboll", "hockey", "NIU", "LIU", "niu", "liu"],
     "när gäller kortet?": ["gäller"],
     "hur får jag mitt kort?": ["kort"],
-    "procent tjejer": ["tjejer", "tjej", "procent", "andel"],
-    "1974":["gammal", "årtal", "jubeleum"],
+    "procent tjejer": ["tjejer", "tjej", "procent", "andel", "procentet", "andelen"],
+    "1974":["gammal", "årtal", "jubeleum", "jubeleumet"],
     "FAQ": ["prov","examination","examinationer", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "ligger", "elever", "elev","datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "elever", "tg", "tumba", "Tumba", "lärare", "lärarna"],
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"],
     "vad händer om jag tappar bort mitt kort": ["tappar"],
     "Tack": ["Tack", "tack"],
-    "Rektor": ["Rektor", "rektor", "rektorn", "alf"]
+    "Rektor": ["Rektor", "rektor", "rektorn", "alf", "Alf"]
 }
 
 
@@ -72,7 +72,7 @@ Några exempel:
 • Entreprenörskap och retorik
 • Idrottskurser så som friskvård, tjejidrott, fotboll, TG Toughest m.m
 • Engelska 7
-• Matematik 2,3,4 och 5
+• Matematik 5
 • Beteendevetenskapliga kurser så som kriminologi, psykologi och sociologi """
     ],
     "Bibliotek": [ 
