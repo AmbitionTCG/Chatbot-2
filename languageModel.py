@@ -23,7 +23,7 @@ anvandningar_lista = {
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"],
     "vad händer om jag tappar bort mitt kort": ["tappar"],
     "Tack": ["Tack", "tack"],
-    "Rektor": ["Rektor", "rektor"]
+    "Rektor": ["Rektor", "rektor", "rektorn", "alf"]
 }
 
 
@@ -76,10 +76,7 @@ Några exempel:
 • Beteendevetenskapliga kurser så som kriminologi, psykologi och sociologi """
     ],
     "Bibliotek": [ 
-        """Undrar du något om biblioteket i tumba?
-
- Biblioteket - skolans hjärta
-TG har Södertörns största gymnasiebibliotek. Det är en oas där du både kan grupparbeta
+        """TG har Södertörns största gymnasiebibliotek. Det är en oas där du både kan grupparbeta
 och studera enskilt. Vi har massor av bra böcker och bibliotekets personal hjälper dig
 hitta rätt både i biblioteket och bland webbens alla infomationsresurser.
 
