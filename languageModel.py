@@ -19,7 +19,7 @@ anvandningar_lista = {
     "hur får jag mitt kort?": ["kort"],
     "procent tjejer": ["tjejer", "tjej", "procent", "andel"],
     "1974":["gammal", "årtal", "jubeleum"],
-    "FAQ": ["prov","examination", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "ligger", "elever", "elev","datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "gammal", "elever", "tg", "tumba", "Tumba"],
+    "FAQ": ["prov","examination","examinationer", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "ligger", "elever", "elev","datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "elever", "tg", "tumba", "Tumba", "lärare", "lärarna"],
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"],
     "vad händer om jag tappar bort mitt kort": ["tappar"],
     "Tack": ["Tack", "tack"],
