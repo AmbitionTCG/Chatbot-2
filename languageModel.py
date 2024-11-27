@@ -31,7 +31,7 @@ svars_lista = {
     "FAQ": [
         "Jag förstår att du kan ha specifika frågor som du behöver hjälp med. Fråga en av eleverna eller lärarna i närheten!",
         "Jag kan inte hjäpa med allt. Fråga en av eleverna eller lärarna i närheten, de kan svara på det mesta!",
-        "Jag kan inte savar på den frågan men jag kan anmäla dig till en prova på dag!"
+        "Jag kan inte svara på den frågan men jag kan anmäla dig till en prova på dag!"
     ],
     "registrera för prova på dag": [
         "Du kan nu skriva in förnamn, efternamn och mejladress så kan vi kontakta dig för att prova på en dag hos oss",
