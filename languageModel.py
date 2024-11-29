@@ -8,7 +8,7 @@ import Registration
 anvandningar_lista = {
     "registrera för prova på dag": ["prova","testa", "registrera", "anmäla"],
     "SL-kort": ["SL", "bus", "tåg", "pendel", "sl"],
-    "IND-val": ["ind", "individuella"],
+    "IND-val": ["ind", "individuella", "IND"],
     "Bibliotek":["bibliotek", "böcker", "biblioteket"],
     "mat": ["skolmat", "matsal", "mat", "skolmaten", "lunch", "skollunch", "maten"],
     "program": ["teknik","antagning", "program","programmet","kurser", "kurs", "data", "programmering", "programera", "arkitektur", "design", "teknikvetenskap", "medieteknik", "inriktningar", "linjer", "linje", "linjen", "linjerna","it", "IT"],
