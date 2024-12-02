@@ -3,6 +3,7 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import random
 import Registration
+import Primtal
 
 
 anvandningar_lista = {
@@ -144,4 +145,5 @@ def match_case(user_input):
     tokens = word_tokenize(user_input)
     match tokens:
         case "primtal":
-            print("call func")
+            Primtal.primtal_calc()
+            
