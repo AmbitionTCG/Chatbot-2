@@ -84,7 +84,6 @@ def myUI():
         entry.bind("<Return>", send) 
 
         input_list.append(user_input)
-        ResetTimer.start_or_reset_timer()
         return user_input
 
 
