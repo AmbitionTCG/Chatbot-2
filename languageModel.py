@@ -105,8 +105,9 @@ Fr 08.00-14.30"""
 
 def find_int(tokens):
     for i in tokens:
-        if i.isdigit == True:
+        if i.isdigit() == True:
             return i
+
 
 
 #preprocess user input
@@ -143,11 +144,15 @@ def detection_func(user_input):
         return "Tack för din ansökan!"
 
 def match_case(user_input):
-    tokens = word_tokenize(user_input)
-    match tokens:
-        case "primtal", "primtalet", "Primtal", "Primtalet":
-            Primtal.primtal_calc(find_int(tokens))
-        case "rövarspråk", "Rövaraspråk":
-            Programs.rövarspråk(user_input)
-        case _:
-            detection_func(user_input)
+    tokens = user_input.split()
+    for i in tokens:
+        match i:
+            case "primtalet":
+                print("tokens", tokens, " int", (find_int(tokens)))
+                return Primtal.primtal_calc(int(find_int(tokens)))
+            case "rövarspråk,":
+                print("tokens", tokens)
+                return Programs.rövarspråk(user_input)
+            case _:
+                print("tokens", tokens,)
+                return detection_func(user_input)

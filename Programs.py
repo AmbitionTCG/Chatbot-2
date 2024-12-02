@@ -2,7 +2,7 @@
 
 def rövarspråk(user_input: str) -> str:
     konsonanter = "bcdfghjklmnpqrstvwxz"
-
+    output = ""
     for letter in user_input:
         output += letter
         if letter.lower() in konsonanter:
