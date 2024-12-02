@@ -133,3 +133,9 @@ def detection_func(user_input, inputuser):
     else:
         Registration.RegFunc(str(inputuser))
         return "Tack för din ansökan!"
+
+def match_case(user_input):
+    tokens = word_tokenize(user_input)
+    match tokens:
+        case "primtal":
+            print("call func")
