@@ -101,6 +101,12 @@ Fr 08.00-14.30"""
     "Rektor": ["Alf Solander är vår GUD! Vi bönfaller honom varje måltid och tackar honom för allt han gjort för Tumba gymnasium!"]
     }
 
+def find_int(tokens):
+    for i in tokens:
+        if i.isdigit == True:
+            return i
+
+
 #preprocess user input
 def preprocess_input(user_input):
     tokens = word_tokenize(user_input)
