@@ -179,7 +179,7 @@ def myUI():
 
     button_send.place(relx=0.84, rely=0.9, anchor=CENTER)
 
-    entry = customtkinter.CTkEntry(master=root, placeholder_text="Skicka ett medalande till mig!", width=1020, height= 50, font=custom_font)
+    entry = customtkinter.CTkEntry(master=root, placeholder_text="Skicka ett medelande till mig!", width=1020, height= 50, font=custom_font)
 
     entry.place(relx=0.39, rely=0.9, anchor=CENTER)
 
