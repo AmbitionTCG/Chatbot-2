@@ -16,7 +16,7 @@ def primtal_calc(amount_of_primes: int) -> None:
                 break
         if primtal:
             prime_numbers.append(str(tal) + " ")
-    return prime_numbers
+    return str(prime_numbers[-1])
     
 
 if __name__ == "__main__":

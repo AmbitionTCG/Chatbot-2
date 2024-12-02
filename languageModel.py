@@ -4,6 +4,7 @@ from nltk.corpus import stopwords
 import random
 import Registration
 import Primtal
+import Programs
 
 
 anvandningar_lista = {
@@ -138,7 +139,7 @@ def detection_func(user_input):
         response = generate_response(issue_category)
         return response
     else:
-        Registration.RegFunc(str(inputuser))
+        Registration.RegFunc(str(user_input))
         return "Tack för din ansökan!"
 
 def match_case(user_input):
@@ -146,3 +147,5 @@ def match_case(user_input):
     match tokens:
         case "primtal":
             Primtal.primtal_calc(find_int(tokens))
+        case "rövarspråk":
+            Programs.rövarspråk(user_input)
