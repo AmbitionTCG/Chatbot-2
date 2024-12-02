@@ -19,7 +19,7 @@ anvandningar_lista = {
     "hur får jag mitt kort?": ["kort"],
     "procent tjejer": ["tjejer", "tjej", "procent", "andel", "procentet", "andelen"],
     "1974":["gammal", "årtal", "jubeleum", "jubeleumet"],
-    "FAQ": ["prov","examination","examinationer", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "ligger", "elever", "elev","datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "elever", "tg", "tumba", "Tumba", "lärare", "lärarna"],
+    "FAQ": ["prov","examination","examinationer", "lektion", "schema", "schemat", "scheman", "termin", "terminen", "ligger", "elever", "elev","datorer", "lånedator", "dator", "lånedatorer", "klass", "klassen", "klasser", "elever", "tg", "tumba", "Tumba", "lärare", "lärarna", "raster"],
     "hälsning":["hej", "goddag","tjena","tja","tjenare","halloj", "Hej", "Goddag", "Tjena", "Tja", "Tjenare", "Halloj", "tjo", "Tjo"],
     "vad händer om jag tappar bort mitt kort": ["tappar"],
     "Tack": ["Tack", "tack"],
@@ -98,7 +98,7 @@ Fr 08.00-14.30"""
     "plugg":["Mängden du behöver plugga eller hur tufft du upplever programmet beror på många faktorer, därför kan jag inte ge dig ett konkret svar. Rekommenderar att prata med våra elever som är här på öppethus för att se deras perspektiv. Jag kan hjälpa dig med att anmäla dig till prova på dag, detta kan hjälppa dig genom att du då får uppleva en dag av studier med våra teknikelever."],
     "1974":["Tumba gymnasium grundades 1974, vi fyller 50 år!"],
     "Tack": ["Inga problem! Finns det något mer jag kan hjälpa med?"],
-    "Rektor": ["Alf Solander är vår GUD! Vi bön faller honom varje måltid och tackar honom för allt han gjort för Tumba gymnasium!"]
+    "Rektor": ["Alf Solander är vår GUD! Vi bönfaller honom varje måltid och tackar honom för allt han gjort för Tumba gymnasium!"]
     }
 
 #preprocess user input
