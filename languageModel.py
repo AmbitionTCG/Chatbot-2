@@ -145,7 +145,9 @@ def detection_func(user_input):
 def match_case(user_input):
     tokens = word_tokenize(user_input)
     match tokens:
-        case "primtal":
+        case "primtal", "primtalet", "Primtal", "Primtalet":
             Primtal.primtal_calc(find_int(tokens))
-        case "rövarspråk":
+        case "rövarspråk", "Rövaraspråk":
             Programs.rövarspråk(user_input)
+        case _:
+            detection_func(user_input)
