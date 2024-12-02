@@ -147,12 +147,8 @@ def match_case(user_input):
     tokens = user_input.split()
     for i in tokens:
         match i:
-            case "primtalet":
-                print("tokens", tokens, " int", (find_int(tokens)))
+            case "primtalet" | "Primtalet" | "primtal" | "Primtal":
                 return Primtal.primtal_calc(int(find_int(tokens)))
-            case "rövarspråk,":
-                print("tokens", tokens)
+            case "rövarspråk" | "Rövarspråk":
                 return Programs.rövarspråk(user_input)
-            case _:
-                print("tokens", tokens,)
-                return detection_func(user_input)
+    return detection_func(user_input)
