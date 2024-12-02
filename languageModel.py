@@ -3,6 +3,7 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import random
 import Registration
+import Primtal
 
 
 anvandningar_lista = {
@@ -129,11 +130,11 @@ def generate_response(issue_category):
     else:
         return ("Ber om ursäkt, men jag kan inte hjälpa dig med det. Kolla din stavning eftersom jag inte fattar stavfel. Jag kan hjälpa dig med att registrera för prova på dagar eller kanske har du andra frågor om skolan?")
 
-def detection_func(user_input, inputuser):
+def detection_func(user_input):
     if Registration.RegVar == False:
         issue_category = detect_issue(user_input)
         if issue_category == "registrera för prova på dag":
-            Registration.RegFunc(str(inputuser), issue_category)
+            Registration.RegFunc(str(user_input), issue_category)
         response = generate_response(issue_category)
         return response
     else:
@@ -144,4 +145,4 @@ def match_case(user_input):
     tokens = word_tokenize(user_input)
     match tokens:
         case "primtal":
-            print("call func")
+            Primtal.primtal_calc(find_int(tokens))
