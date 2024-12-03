@@ -9,7 +9,7 @@ def hitta_enheter(tokens):
     
     "Liter", "l", "Milliliter", "ml", "Kubikmeter", "m³", 
     "Kubikcentimeter", "cm³", "Cubic inch", "in³", "Gallon", "gal", 
-    "Quart", "qt", "Pint", "pt", "Cup", "cup", ,
+    "Quart", "qt", "Pint", "pt", "Cup", "cup",
     
     "Celsius", "°C", "Fahrenheit", "°F", "Kelvin", "K", "Rankine", "°R"
 ]
@@ -18,3 +18,12 @@ def hitta_enheter(tokens):
         if i in enheter:
             output.append(i)
     return output
+
+def omvandlare(input):
+    lista_att_refrensa = {
+        0.01: ["cm", "cl"],
+        1: ["m", "l", "celsius"],
+        1000: ["kg", "km"],
+    }
+
+    #return find int times ( första enhet/andra enhet)
