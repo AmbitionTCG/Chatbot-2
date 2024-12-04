@@ -5,7 +5,9 @@ import random
 import Registration
 import Primtal
 import Programs
+import onvandlare
 
+import omvandlare
 
 anvandningar_lista = {
     "registrera för prova på dag": ["prova","testa", "registrera", "anmäla"],
@@ -151,4 +153,6 @@ def match_case(user_input):
                 return Primtal.primtal_calc(int(find_int(tokens)))
             case "rövarspråk" | "Rövarspråk":
                 return Programs.rövarspråk(user_input)
+            case "omvandla" | "Omvandla" | "Omvandlare" | "Omvandlare":
+                return omvandlare.omvandlare(omvandlare.hitta_enheter(tokens))
     return detection_func(user_input)
