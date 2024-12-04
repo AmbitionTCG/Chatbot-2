@@ -21,7 +21,7 @@ def hitta_enheter(tokens):
             output.append(i)
     return output
 
-def omvandlare(input):
+def omvandlare(tokens):
     lista_att_refrensa = {
         0.000001: ["Kubikcentimeter", "kubikcentimeter", "cm³"],
         0.001: ["Milliliter", "milliliter", "ml", "Millimeter", "millimeter", "mm", "Milligram", "milligram", "mg"],
@@ -42,4 +42,12 @@ def omvandlare(input):
         160934.4: ["Mile", "mile", "mi"],
         1000000: ["Ton", "ton", "t"]
     }
-    #return find int times ( första enhet/andra enhet)
+
+    list_of_enhet = []
+
+    for i in tokens:
+        for category, keywords in lista_att_refrensa.items():
+            if any(keyword in tokens for keyword in keywords):
+                list_of_enhet.append(category)
+
+    return find_int(tokens) * (list_of_enhet(0)/list_of_enhet(1))
