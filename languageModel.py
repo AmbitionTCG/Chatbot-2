@@ -149,8 +149,10 @@ def match_case(user_input):
         match i:
             case "primtalet" | "Primtalet" | "primtal" | "Primtal":
                 return Primtal.primtal_calc(int(find_int(tokens)))
-            case "rövarspråk" | "Rövarspråk":
-                return Programs.rövarspråk(user_input)
+            case "rövarspråk" | "Rövarspråk" | "rövarspråk:" | "Rövarspråk:":
+                return Programs.rövarspråk(tokens)
+            case "akronym" | "Akronym" | "akronym:" | "Akronym:":
+                return Programs.akronym(tokens)
             case "omvandla" | "Omvandla" | "Omvandlare" | "Omvandlare":
                 return omvandlare.omvandlare(tokens,omvandlare.hitta_enheter(tokens))
     return detection_func(user_input)
