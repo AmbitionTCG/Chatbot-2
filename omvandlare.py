@@ -1,4 +1,4 @@
-from languagemodel import find_int
+import languageModel
 
 def hitta_enheter(tokens):
     
@@ -50,4 +50,4 @@ def omvandlare(tokens, filteredtokens):
             if any(keyword in filteredtokens for keyword in keywords):
                 list_of_enhet.append(category)
 
-    return find_int(tokens) * (list_of_enhet(0)/list_of_enhet(1))
+    return languageModel.find_int(tokens) * (list_of_enhet(0)/list_of_enhet(1))

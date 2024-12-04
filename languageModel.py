@@ -5,8 +5,6 @@ import random
 import Registration
 import Primtal
 import Programs
-import onvandlare
-
 import omvandlare
 
 anvandningar_lista = {
