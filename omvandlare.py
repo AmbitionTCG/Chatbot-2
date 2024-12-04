@@ -1,3 +1,5 @@
+from languagemodel import find_int
+
 def hitta_enheter(tokens):
     
     enheter = [
@@ -11,7 +13,7 @@ def hitta_enheter(tokens):
     "Kubikcentimeter", "kubikcentimeter","cm³", "Gallon", "gallon", "gal",
     "Quart", "quart", "qt", "Pint", "pint", "pt", "Cup", "cup",
     
-    "Celsius", "celsius", "°C", "Fahrenheit", "fahrenhiet", "°F", "Kelvin", "kelvin", "K", "Rankine", "rankine", "°R"
+    "Celsius", "celsius", "°C", "Fahrenheit", "fahrenhiet", "°F", "Kelvin", "kelvin", "°K", "Rankine", "rankine", "°R"
 ]
     output = []
     for i in tokens:
@@ -40,5 +42,4 @@ def omvandlare(input):
         160934.4: ["Mile", "mile", "mi"],
         1000000: ["Ton", "ton", "t"]
     }
-
     #return find int times ( första enhet/andra enhet)
