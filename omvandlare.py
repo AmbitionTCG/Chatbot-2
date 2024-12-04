@@ -47,7 +47,7 @@ def omvandlare(tokens, filteredtokens):
 
     for i in filteredtokens:
         for category, keywords in lista_att_refrensa.items():
-            if any(keyword in tokens for keyword in keywords):
+            if any(keyword in filteredtokens for keyword in keywords):
                 list_of_enhet.append(category)
 
     return find_int(tokens) * (list_of_enhet(0)/list_of_enhet(1))
