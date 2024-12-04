@@ -21,7 +21,7 @@ def hitta_enheter(tokens):
             output.append(i)
     return output
 
-def omvandlare(tokens):
+def omvandlare(tokens, filteredtokens):
     lista_att_refrensa = {
         0.000001: ["Kubikcentimeter", "kubikcentimeter", "cm³"],
         0.001: ["Milliliter", "milliliter", "ml", "Millimeter", "millimeter", "mm", "Milligram", "milligram", "mg"],
@@ -45,7 +45,7 @@ def omvandlare(tokens):
 
     list_of_enhet = []
 
-    for i in tokens:
+    for i in filteredtokens:
         for category, keywords in lista_att_refrensa.items():
             if any(keyword in tokens for keyword in keywords):
                 list_of_enhet.append(category)

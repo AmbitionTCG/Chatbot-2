@@ -154,5 +154,5 @@ def match_case(user_input):
             case "rövarspråk" | "Rövarspråk":
                 return Programs.rövarspråk(user_input)
             case "omvandla" | "Omvandla" | "Omvandlare" | "Omvandlare":
-                return omvandlare.omvandlare(omvandlare.hitta_enheter(tokens))
+                return omvandlare.omvandlare(tokens,omvandlare.hitta_enheter(tokens))
     return detection_func(user_input)
