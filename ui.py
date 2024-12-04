@@ -13,13 +13,11 @@ message_row = 0
 
 user_input = ""
 
-input_list = []
-
 
 
 def myUI():
 
-    global reset, message_row, user_input
+    global message_row, user_input
 
     root = customtkinter.CTk()
 
@@ -32,11 +30,6 @@ def myUI():
     customtkinter.set_appearance_mode("dark")
 
     root.after(0, lambda: root.state('zoomed'))
-
-    def reset():
-        root.destroy()
-        myUI()
-
 
     def send(user_input="", input_list=[], *args) -> str:
 
@@ -64,10 +57,6 @@ def myUI():
 
         root.update()
 
-        if user_input.lower() == "dfg":
-            reset()
-            return
-
 
         bot_reply = f"{languageModel.match_case(user_input)}"
         running = True
@@ -81,9 +70,7 @@ def myUI():
                 
         button_send.configure(state="normal")    
 
-        entry.bind("<Return>", send) 
-
-        input_list.append(user_input)
+        entry.bind("<Return>", send)
         return user_input
 
 
