@@ -83,4 +83,4 @@ def omvandlare(tokens, filteredtokens):
                     return languageModel.find_int(tokens) - 459.67
                 case "Kelvin" | "kelvin" | "K":
                     return languageModel.find_int(tokens) - 218.52
-    return languageModel.find_int(tokens) * (list_of_enhet(0)/list_of_enhet(1))
+    return "Det är " + str(float(languageModel.find_int(tokens)) * (list_of_enhet[0]/list_of_enhet[1])) + " " + filteredtokens[1]
