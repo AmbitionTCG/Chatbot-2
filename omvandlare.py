@@ -13,7 +13,7 @@ def hitta_enheter(tokens):
     "Kubikcentimeter", "kubikcentimeter","cm³", "Gallon", "gallon", "gal",
     "Quart", "quart", "qt", "Pint", "pint", "pt", "Cup", "cup",
     
-    "Celsius", "celsius", "°C", "Fahrenheit", "fahrenhiet", "°F", "Kelvin", "kelvin", "°K", "Rankine", "rankine", "°R"
+    "Celsius", "celsius", "C", "Fahrenheit", "fahrenhiet", "F", "Kelvin", "kelvin", "K", "Rankine", "rankine", "R"
 ]
     output = []
     for i in tokens:
@@ -29,8 +29,7 @@ def omvandlare(tokens, filteredtokens):
         0.01: ["Centimeter", "centimeter", "cm"],
         0.24: ["Cup", "cup"],
         0.568261: ["Pint", "pint", "pt"],
-        1: ["Celsius", "celsius", "°C", "Meter", "meter", "m", "liter", "Liter", "l", "Kubikmeter",
-            "kubikmeter", "m³", "Gram", "gram", "g"],
+        1: ["Meter", "meter", "m", "liter", "Liter", "l", "Kubikmeter", "kubikmeter", "m³", "Gram", "gram", "g"],
         1.101220: ["Quart", "quart", "qt"],
         2.54: ["Tum", "tum", "in"],
         3.785: ["Gallon", "gallon", "gal"],
@@ -51,4 +50,37 @@ def omvandlare(tokens, filteredtokens):
             if any(keyword in filteredtokens for keyword in keywords):
                 list_of_enhet.append(category)
 
+    match list_of_enhet[0]:
+        case "Celsius" | "celsius" | "C":
+            match list_of_enhet[1]:
+                case "Fahrenheit" | "fahrenheit" | "F":
+                    return (languageModel.find_int(tokens) * 1.8) + 32
+                case "Kelvin" | "kelvin" | "K":
+                    return languageModel.find_int(tokens) + 273.15
+                case "Rankine" | "rankine" | "R":
+                    return languageModel.find_int(tokens) + 491.67
+        case "Fahrenheit" | "fahrenheit" | "F":
+            match list_of_enhet[1]:
+                case "Celsius" | "celsius" | "C":
+                    return (languageModel.find_int(tokens) - 32) / 1.8
+                case "Kelvin" | "kelvin" | "K":
+                    return ((languageModel.find_int(tokens) - 32) / 1.8) - 273.15
+                case "Rankine" | "rankine" | "R":
+                    return languageModel.find_int(tokens) + 459.67
+        case "Kelvin" | "kelvin" | "K":
+            match list_of_enhet[1]:
+                case "Celsius" | "celsius" | "C":
+                    return languageModel.find_int(tokens) - 273.15
+                case "Fahrenheit" | "fahrenheit" | "F":
+                    return ((languageModel.find_int(tokens) - 273.15) * 1.8) + 32
+                case "Rankine" | "rankine" | "R":
+                    return languageModel.find_int(tokens) + 218.52
+        case "Rankine" | "rankine" | "R":
+            match list_of_enhet[1]:
+                case "Celsius" | "celsius" | "C":
+                    return languageModel.find_int(tokens) - 491.67
+                case "Fahrenheit" | "fahrenheit" | "F":
+                    return languageModel.find_int(tokens) - 459.67
+                case "Kelvin" | "kelvin" | "K":
+                    return languageModel.find_int(tokens) - 218.52
     return languageModel.find_int(tokens) * (list_of_enhet(0)/list_of_enhet(1))
