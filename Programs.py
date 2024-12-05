@@ -11,9 +11,10 @@ def rövarspråk(tokens: list) -> str:
             index = tokens.index(i)
             break
     
-
-    for i in range(index+1):
-        del tokens[i]
+    print("rövaraspråk: " + str(tokens))
+    for i in range(index + 1):
+        del tokens[0]
+    print("rövaraspråk: " + str(tokens))
     
 
     for letter in str(tokens):
@@ -33,16 +34,20 @@ def akronym(tokens: str) -> str:
     for i in tokens:
         if i in check_akronym:
             index = tokens.index(i)
+            print(index)
             break
     
 
-    for i in range(index+1):
-        del tokens[i]
+    print("Akronym: " + str(tokens) + str(index))
+    for i in range(index + 1):
+        print(i)
+        del tokens[0]
+    print("Akronym: " + str(tokens))
 
 
-    words = tokens
+    
     akronym = ""
-    for word in words:
+    for word in tokens:
         akronym += word[0]
         akronym += "."
     return akronym.upper()
