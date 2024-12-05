@@ -11,9 +11,10 @@ def rövarspråk(tokens: list) -> str:
             index = tokens.index(i)
             break
     
-
-    for i in range(index+1):
-        del tokens[i]
+    print("rövaraspråk: " + str(tokens))
+    for i in range(index + 1):
+        del tokens[0]
+    print("rövaraspråk: " + str(tokens))
     
 
     for letter in str(tokens):
@@ -28,19 +29,26 @@ def medelvärde(*tal: int) -> float:
 
 def akronym(tokens: str) -> str:
 
-    check_akronym = ["akronyms", "Akronyms", "akronym:", "Akronym:"]
+    check_akronym = ["akronym", "Akronym", "akronym:", "Akronym:"]
 
-    for i in check_akronym:
-        if i in tokens:
-            mening = " ".join((tokens))
-            testar = mening.split(i)
-            words = testar[1:]
+    for i in tokens:
+        if i in check_akronym:
+            index = tokens.index(i)
+            print(index)
             break
+    
 
+    print("Akronym: " + str(tokens) + str(index))
+    for i in range(index + 1):
+        print(i)
+        del tokens[0]
+    print("Akronym: " + str(tokens))
+
+
+    
     akronym = ""
-    for word in words[0].split(" "):
-        if len(word) > 1:
-            akronym += word[0]
-            akronym += "."
+    for word in tokens:
+        akronym += word[0]
+        akronym += "."
     return akronym.upper()
 
