@@ -28,22 +28,19 @@ def medelvärde(*tal: int) -> float:
 
 def akronym(tokens: str) -> str:
 
-    check_akronym = ["akronym", "Akronym", "akronym:", "Akronym:"]
+    check_akronym = ["akronyms", "Akronyms", "akronym:", "Akronym:"]
 
-    for i in tokens:
-        if i in check_akronym:
-            index = tokens.index(i)
+    for i in check_akronym:
+        if i in tokens:
+            mening = " ".join((tokens))
+            testar = mening.split(i)
+            words = testar[1:]
             break
-    
 
-    for i in range(index+1):
-        del tokens[i]
-
-
-    words = tokens
     akronym = ""
-    for word in words:
-        akronym += word[0]
-        akronym += "."
+    for word in words[0].split(" "):
+        if len(word) > 1:
+            akronym += word[0]
+            akronym += "."
     return akronym.upper()
 
