@@ -103,7 +103,7 @@ Fr 08.00-14.30"""
     "Rektor": ["Alf Solander är vår GUD! Vi bönfaller honom varje måltid och tackar honom för allt han gjort för Tumba gymnasium!"]
     }
 
-def find_int(tokens):
+def find_int(tokens: list[str]) -> int:
     for i in tokens:
         if i.isdigit() == True:
             return int(i)
@@ -111,14 +111,14 @@ def find_int(tokens):
 
 
 #preprocess user input
-def preprocess_input(user_input):
+def preprocess_input(user_input: list[str]) -> str:
     tokens = word_tokenize(user_input)
     stop_words = set(stopwords.words('swedish'))
     filtered_tokens =[word for word in tokens if word not in stop_words]
     return filtered_tokens
 
 
-def detect_issue(user_input):
+def detect_issue(user_input: list[str]) -> str:
     tokens = preprocess_input(user_input)
 
     for category, keywords in anvandningar_lista.items():
@@ -126,13 +126,13 @@ def detect_issue(user_input):
             return category
     return "general"
 
-def generate_response(issue_category):
+def generate_response(issue_category: list[str]) -> str:
     if issue_category in svars_lista:
         return random.choice(svars_lista[issue_category])
     else:
         return ("Ber om ursäkt, men jag kan inte hjälpa dig med det. Kolla din stavning eftersom jag inte fattar stavfel. Jag kan hjälpa dig med att registrera för prova på dagar eller kanske har du andra frågor om skolan?")
 
-def detection_func(user_input):
+def detection_func(user_input: list[str]) -> str:
     if Registration.RegVar == False:
         issue_category = detect_issue(user_input)
         if issue_category == "registrera för prova på dag":
@@ -143,7 +143,7 @@ def detection_func(user_input):
         Registration.RegFunc(str(user_input))
         return "Tack för din ansökan!"
 
-def match_case(user_input):
+def match_case(user_input: list[str]) -> str:
     tokens = user_input.split()
     for i in tokens:
         match i:

@@ -3,7 +3,7 @@
 RegVar = False
 
 
-def RegFunc(write="", issuecat=""):
+def RegFunc(write: str = "", issuecat: str = "") -> None:
 
     global RegVar
 
