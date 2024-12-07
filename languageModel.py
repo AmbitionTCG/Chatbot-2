@@ -106,7 +106,7 @@ Fr 08.00-14.30"""
 def find_int(tokens):
     for i in tokens:
         if i.isdigit() == True:
-            return i
+            return int(i)
 
 
 
