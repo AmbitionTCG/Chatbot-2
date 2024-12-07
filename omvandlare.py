@@ -1,6 +1,6 @@
 import languageModel
 
-def hitta_enheter(tokens):
+def hitta_enheter(tokens: list[str]) -> list[str]:
     
     enheter = [
     "Centimeter", "centimeter", "cm", "Meter", "meter", "m", "kilometer", "Kilometer", "km", "Millimeter", "millimeter", "mm",
@@ -22,7 +22,7 @@ def hitta_enheter(tokens):
             if len(output) == 2:
                 return output
 
-def omvandlare(tokens, filteredtokens):
+def omvandlare(tokens: list[str], filteredtokens: list[str]) -> str:
     lista_att_refrerera = {
         0.000001: ["Kubikcentimeter", "kubikcentimeter", "cm³"],
         0.001: ["Milliliter", "milliliter", "ml", "Millimeter", "millimeter", "mm", "Milligram", "milligram", "mg"],
@@ -49,15 +49,15 @@ def omvandlare(tokens, filteredtokens):
         for category, keywords in lista_att_refrerera.items():
             if i in keywords:
                 list_of_enhet.append(category)
-            else: list_of_enhet = filteredtokens
+            
 
 
     if languageModel.find_int(tokens) == None:
         return "Ber om ursäkt men kunde inte hitta ett tal i din mening!"
     else:
-        match list_of_enhet[0]:
+        match filteredtokens[0]:
             case "Celsius" | "celsius" | "C":
-                match list_of_enhet[1]:
+                match filteredtokens[1]:
                     case "Fahrenheit" | "fahrenheit" | "F":
                         return "Det är " + str((languageModel.find_int(tokens) * 1.8) + 32) + " " + filteredtokens[1]
                     case "Kelvin" | "kelvin" | "K":
@@ -65,7 +65,7 @@ def omvandlare(tokens, filteredtokens):
                     case "Rankine" | "rankine" | "R":
                         return "Det är " + str(languageModel.find_int(tokens) + 491.67) + " " + filteredtokens[1]
             case "Fahrenheit" | "fahrenheit" | "F":
-                match list_of_enhet[1]:
+                match filteredtokens[1]:
                     case "Celsius" | "celsius" | "C":
                         return "Det är " + str((languageModel.find_int(tokens) - 32) / 1.8) + " " + filteredtokens[1]
                     case "Kelvin" | "kelvin" | "K":
@@ -73,7 +73,7 @@ def omvandlare(tokens, filteredtokens):
                     case "Rankine" | "rankine" | "R":
                         return "Det är " + str(languageModel.find_int(tokens) + 459.67) + " " + filteredtokens[1]
             case "Kelvin" | "kelvin" | "K":
-                match list_of_enhet[1]:
+                match filteredtokens[1]:
                     case "Celsius" | "celsius" | "C":
                         return "Det är " + str(languageModel.find_int(tokens) - 273.15) + " " + filteredtokens[1]
                     case "Fahrenheit" | "fahrenheit" | "F":
@@ -81,7 +81,7 @@ def omvandlare(tokens, filteredtokens):
                     case "Rankine" | "rankine" | "R":
                         return "Det är " + str(languageModel.find_int(tokens) + 218.52) + " " + filteredtokens[1]
             case "Rankine" | "rankine" | "R":
-                match list_of_enhet[1]:
+                match filteredtokens[1]:
                     case "Celsius" | "celsius" | "C":
                         return "Det är " + str(languageModel.find_int(tokens) - 491.67) + " " + filteredtokens[1]
                     case "Fahrenheit" | "fahrenheit" | "F":

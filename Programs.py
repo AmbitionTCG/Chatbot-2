@@ -1,9 +1,10 @@
 
 
-def rövarspråk(tokens: list) -> str:
+def rövarspråk(tokens: list[str]) -> str:
     konsonanter = "bcdfghjklmnpqrstvwxz"
     output = ""
-
+    tokens_str = ""
+    
     check_rövarspråk = ["Rövarspråk", "rövarspråk", "Rövarspråk:", "rövarspråk:"]
 
     for i in tokens:
@@ -11,19 +12,22 @@ def rövarspråk(tokens: list) -> str:
             index = tokens.index(i)
             break
     
-    print("rövaraspråk: " + str(tokens))
     for i in range(index + 1):
         del tokens[0]
-    print("rövaraspråk: " + str(tokens))
     
+    for i in tokens:
+        tokens_str += i
+        tokens_str += " "
 
-    for letter in str(tokens):
+    for letter in tokens_str:
         output += letter
         if letter.lower() in konsonanter:
             output += "o" + letter.lower()
     return output
 
-def medelvärde(tokens: str) -> str:
+
+
+def medelvärde(tokens: list[str]) -> str:
     tal = []
     for i in tokens:
         if i.isdigit() == True:
@@ -32,7 +36,7 @@ def medelvärde(tokens: str) -> str:
     medelvärde = sum(tal)/len(tal)
     return "Medelvärdet är: " + str(medelvärde)
 
-def akronym(tokens: str) -> str:
+def akronym(tokens: list[str]) -> str:
 
     check_akronym = ["akronyms:", "Akronyms:", "akronym:", "Akronym:", "akronym", "Akronym", "akronyms", "Akronyms"]
 

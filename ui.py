@@ -22,7 +22,7 @@ def myUI():
 
     root.after(0, lambda: root.state('zoomed'))
 
-    def send(input_list=[], *args) -> str:
+    def send(*args) -> str:
 
         global message_row
 
@@ -42,7 +42,6 @@ def myUI():
         chat_canvas.yview_moveto(1.0)
 
         message_row += 1
-        print(message_row)
 
         root.update()
 
@@ -53,23 +52,20 @@ def myUI():
                 add_message_bubble(bot_reply, align="left", color="#444444", max_width=1280, isrelpy=True)
                 running = False
                 message_row += 1
-                print(message_row)
-                
                 
         button_send.configure(state="normal")    
 
         entry.bind("<Return>", send)
-        return user_input
-
+        
 
     def add_message_bubble(text, align="right", color="grey", max_width=1080, isrelpy=False, font=custom_font):
         global message_row
 
-        bubble_frame = customtkinter.CTkFrame(message_frame, fg_color=color)
+        bubble_frame = customtkinter.CTkFrame(master=message_frame, fg_color=color)
         if align == "right":
-            bubble_frame.grid(row=message_row, column=0, sticky="e", padx=(10, 10), pady=5)
+            bubble_frame.grid(row=message_row, sticky="e", padx=(10, 10), pady=5)
         elif align == "left":
-            bubble_frame.grid(row=message_row, column=0, sticky="w", padx=(10, 10), pady=5)
+            bubble_frame.grid(row=message_row, sticky="w", padx=(10, 10), pady=5)
     
 
         bubble_label = customtkinter.CTkLabel(
@@ -138,7 +134,7 @@ def myUI():
 
     message_frame.bind("<Configure>", configure_scroll_region)
 
-    add_message_bubble((" " * 1480), align="left", color="#2B2B2B", max_width=1450)
+    add_message_bubble((" " * 1480), align="left", color="#2B2B2B", max_width=1450) # för att lägga till enlägga till en kudde mella column 1 och 2
     add_message_bubble("""Hej, jag heter TG-GPT. Jag kan hjälpa till med anmälan till prova på dagar och andra frågor om skolan!
                        
 Jag kan också omvandla tal. Ex omvandla 10 grader celsius till fahrenheit.
