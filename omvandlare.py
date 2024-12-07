@@ -50,7 +50,7 @@ def omvandlare(tokens, filteredtokens):
             if i in keywords:
                 list_of_enhet.append(category)
             else: list_of_enhet = filteredtokens
-    if find_int(tokens) == None:
+    if languageModel.find_int(tokens) == None:
         return "Ber om ursäkt men kunde inte hitta ett tal i din mening!"
     else:
         match list_of_enhet[0]:
