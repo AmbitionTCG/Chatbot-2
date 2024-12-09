@@ -148,7 +148,7 @@ def match_case(user_input: list[str]) -> str:
     for i in tokens:
         match i:
             case "primtalet" | "Primtalet" | "primtal" | "Primtal":
-                return Primtal.primtal_calc(find_int(tokens))
+                return Primtal.primtal_calc(int(find_int(tokens)))
             case "rövarspråk" | "Rövarspråk" | "rövarspråk:" | "Rövarspråk:":
                 return Programs.rövarspråk(tokens)
             case "akronym" | "Akronym" | "akronym:" | "Akronym:" | "Akronyms" | "akronyms" | "Akronyms:" | "akronyms:":
